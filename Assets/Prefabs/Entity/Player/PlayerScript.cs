@@ -11,6 +11,7 @@ public class PlayerController : EntityScript
     [Header("Настройки проверки земли")]
     [SerializeField] private float groundCheckRadius = 0.2f;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float airModifire;
 
     private Rigidbody2D rb;
     private float horizontalInput;
@@ -38,7 +39,7 @@ public class PlayerController : EntityScript
         }
         else 
         { 
-            accelerationDemodifire = 10;
+            accelerationDemodifire = airModifire;
         }
         horizontalInput = Input.GetAxisRaw("Horizontal");
         if (horizontalInput < currentHorisontalInput)
