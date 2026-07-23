@@ -17,6 +17,7 @@ public class PlayerController : EntityScript
     private float currentHorisontalInput;
     private bool isGrounded;
     private Transform GroundTransform;
+    private float accelerationDemodifire;
 
     private void Awake()
     {
@@ -31,13 +32,21 @@ public class PlayerController : EntityScript
 
     private void Update()
     {
+        if (isGrounded)
+        {
+            accelerationDemodifire = 1;
+        }
+        else 
+        { 
+            accelerationDemodifire = 10;
+        }
         horizontalInput = Input.GetAxisRaw("Horizontal");
         if (horizontalInput < currentHorisontalInput)
         {
-            currentHorisontalInput -= Mathf.Min(acceleration, currentHorisontalInput - horizontalInput);
+            currentHorisontalInput -= Mathf.Min(acceleration/accelerationDemodifire, currentHorisontalInput - horizontalInput);
         } else if (horizontalInput > currentHorisontalInput)
         {
-            currentHorisontalInput += Mathf.Min(acceleration, horizontalInput - currentHorisontalInput);
+            currentHorisontalInput += Mathf.Min(acceleration/accelerationDemodifire, horizontalInput - currentHorisontalInput);
         }
             isGrounded = Physics2D.OverlapCircle(GroundTransform.position, groundCheckRadius, groundLayer);
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -49,5 +58,6 @@ public class PlayerController : EntityScript
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(currentHorisontalInput * moveSpeed, rb.linearVelocity.y);
+        Debug.Log(currentHorisontalInput * moveSpeed);
     }
 }
