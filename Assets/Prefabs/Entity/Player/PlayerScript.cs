@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerController : EntityScript
+public class PlayerScript : EntityScript
 {
     [Header("—сылки на внутренние объекты")]
     [SerializeField] private GameObject groundCheck;
@@ -19,6 +19,8 @@ public class PlayerController : EntityScript
     private bool isGrounded;
     private Transform GroundTransform;
     private float accelerationDemodifire;
+
+    public static PlayerScript Game_player { get; private set; }
 
     private void Awake()
     {
