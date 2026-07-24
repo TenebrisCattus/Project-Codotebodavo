@@ -74,6 +74,7 @@ public class EnemyScript : EntityScript
         {
             PlayerScript.Game_player.GiveDamage(0.33f);
             nextTimeForAttack = Time.time + attackDelay;
+            OnTouched();
         }
     }
 
@@ -81,4 +82,6 @@ public class EnemyScript : EntityScript
     {
         return attackDelay;
     }
+
+    public virtual void OnTouched() { }
 }

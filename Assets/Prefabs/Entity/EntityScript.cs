@@ -7,6 +7,8 @@ public class EntityScript : MonoBehaviour
     [SerializeField] private float HP = 1.0f;
     [SerializeField] private float MaxHP = 1.0f;
 
+    private Rigidbody2D rb;
+
     void Update()
     {
         
@@ -30,6 +32,11 @@ public class EntityScript : MonoBehaviour
         }
     }
 
+    public float GetMaxHP()
+    {
+        return MaxHP;
+    }
+
     //ѕри переписывании GiveDamage в рамках дочернего класса использовать SetHP ќЅя«ј“≈Ћ№Ќќ
     public virtual void GiveDamage(float damage)
     {
@@ -40,4 +47,7 @@ public class EntityScript : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public Rigidbody2D GetRB() {  return rb; }
+    public void SetRB(Rigidbody2D rb) { this.rb = rb; }
 }

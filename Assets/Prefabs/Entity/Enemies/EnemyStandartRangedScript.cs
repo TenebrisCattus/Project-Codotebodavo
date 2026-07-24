@@ -6,13 +6,8 @@ public class EnemyStandartRangedScript : EnemyScript
     [SerializeField] GameObject Projectile;
     [SerializeField] Sprite ProjectileSprite;
 
-    private Rigidbody2D rb;
     private float nextTimeForAttackRanged;
 
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
     private void Update()
     {
         Flip();

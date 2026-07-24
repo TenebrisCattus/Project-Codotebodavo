@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class EnemyStandartMeleeScript : EnemyScript
+public class EnemySleepMeleeScript : EnemyScript
 {
+    private bool isTouched;
 
     private void Start()
     {
@@ -10,9 +11,15 @@ public class EnemyStandartMeleeScript : EnemyScript
     private void Update()
     {
         FindPlayerRightAndDestinaton();
-        GoToPlayer();
+        if (isTouched)
+        {
+            GoToPlayer();
+        }
+        else if (GetHP() < GetMaxHP())
+        {
+            OnTouched();
+        }
     }
-
     private void GoToPlayer()
     {
         if (SeePlayer() && DestinatonToPlayer() < ReactionRadius())
@@ -26,5 +33,11 @@ public class EnemyStandartMeleeScript : EnemyScript
                 GetRB().linearVelocityX = GetSpeed() * -1;
             }
         }
+    }
+
+    public override void OnTouched()
+    {
+        base.OnTouched();
+        isTouched = true;
     }
 }

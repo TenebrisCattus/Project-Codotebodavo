@@ -18,7 +18,6 @@ public class PlayerScript : EntityScript
     [SerializeField] private Sprite ProjectileSprite;
 
 
-    private Rigidbody2D rb;
     private float horizontalInput;
     private float UpDownSightInput;
     private float LeftRightSightInput;
@@ -46,7 +45,7 @@ public class PlayerScript : EntityScript
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        SetRB(GetComponent<Rigidbody2D>());
         GroundTransform = groundCheck.transform;
     }
 
@@ -78,7 +77,7 @@ public class PlayerScript : EntityScript
             isGrounded = Physics2D.OverlapCircle(GroundTransform.position, groundCheckRadius, groundLayer);
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            GetRB().linearVelocity = new Vector2(GetRB().linearVelocity.x, jumpForce);
         }
 
         if (horizontalInput == -1)
@@ -134,7 +133,6 @@ public class PlayerScript : EntityScript
                 sightDirection = 135f;
                 break;
         }
-        Debug.Log(RightSight);
     }
     private void FireProjectile()
     {
@@ -145,6 +143,6 @@ public class PlayerScript : EntityScript
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(currentHorisontalInput * moveSpeed, rb.linearVelocity.y);
+        GetRB().linearVelocity = new Vector2(currentHorisontalInput * moveSpeed, GetRB().linearVelocity.y);
     }
 }
