@@ -3,6 +3,8 @@ using UnityEngine.EventSystems;
 
 public class EnemyScript : EntityScript
 {
+    [Header("AI Settings")]
+    [SerializeField] private float reactionRadius;
     [Header("Movement Settings")]
     [SerializeField] private float speed;
     [Header("Obstacle Layer")]
@@ -56,4 +58,6 @@ public class EnemyScript : EntityScript
     {
         this.speed = speed;
     }
+
+    public float ReactionRadius() {  return reactionRadius; }
 }
