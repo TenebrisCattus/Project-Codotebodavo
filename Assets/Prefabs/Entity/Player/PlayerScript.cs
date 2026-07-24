@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerScript : EntityScript
 {
-    [Header("Ссылки на внутренние объекты")]
+    [Header("Links to internal objects")]
     [SerializeField] private GameObject groundCheck;
-    [Header("Настройки движения")]
+    [Header("Movement settings")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float acceleration;
-    [Header("Настройки проверки земли")]
+    [Header("Ground check settings")]
     [SerializeField] private float groundCheckRadius = 0.2f;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float airModifire;

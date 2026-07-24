@@ -3,18 +3,26 @@ using UnityEngine.EventSystems;
 
 public class EnemyScript : EntityScript
 {
-    private LayerMask obstacleLayer;
+    [Header("Obstacle Layer")]
+    [SerializeField] private LayerMask obstacleLayer;
 
-    private void Start()
+    private float destinatonToPlayerX;
+    private bool isPlayerRight;
+
+    private void Update()
     {
-        obstacleLayer = LayerMask.NameToLayer("Default");
-    }
-    void Update()
-    {
-        Debug.Log(HasLineOfSight());
+        destinatonToPlayerX = PlayerScript.Game_player.transform.position.x - transform.position.x;
+        if (destinatonToPlayerX > 0)
+        {
+            isPlayerRight = true;
+        }
+        else
+        {
+            isPlayerRight = false;
+        } 
     }
 
-    bool HasLineOfSight()
+    public bool SeePlayer()
     {
         RaycastHit2D hit = Physics2D.Linecast(transform.position, PlayerScript.Game_player.transform.position, obstacleLayer);
         if (hit.collider == null)
@@ -25,5 +33,15 @@ public class EnemyScript : EntityScript
         {
             return false; // На пути есть препятствие
         }
+    }
+
+    public float DestinatonToPlayer()
+    {
+        return Mathf.Abs(destinatonToPlayerX);
+    }
+
+    public bool IsPlayerRight() 
+    {
+        return isPlayerRight;
     }
 }

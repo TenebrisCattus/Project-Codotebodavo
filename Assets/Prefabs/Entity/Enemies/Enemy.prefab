@@ -84,7 +84,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyScript
   HP: 1
   MaxHP: 1
-  target: {fileID: 0}
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1

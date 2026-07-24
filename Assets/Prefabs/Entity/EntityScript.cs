@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EntityScript : MonoBehaviour
 {
-    [Header("Çהמנמגüו")]
+    [Header("Health")]
     [SerializeField] private float HP = 1.0f;
     [SerializeField] private float MaxHP = 1.0f;
 

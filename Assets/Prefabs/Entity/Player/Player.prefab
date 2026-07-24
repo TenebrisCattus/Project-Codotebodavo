@@ -273,6 +273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548f53fc27293f0409fc61eb61a51a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
+  HP: 1
+  MaxHP: 1
   groundCheck: {fileID: 8696478615125689932}
   moveSpeed: 8
   jumpForce: 16
@@ -281,4 +283,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 1
-  airModifire: 10
+  airModifire: 3
+  Projectile: {fileID: 6806987864797394368, guid: fbf62fefdad4d274db51ba93298eea55, type: 3}
+  ProjectileSprite: {fileID: 7482667652216324306, guid: a970a03747bfd25409575da75514faad, type: 3}
