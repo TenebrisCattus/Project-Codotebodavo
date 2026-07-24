@@ -10,7 +10,7 @@ public class ProjectileScript : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, lifetime);
+        
     }
 
     // Update is called once per frame
@@ -25,5 +25,6 @@ public class ProjectileScript : MonoBehaviour
         sr.sprite = sprite;
         rb.AddForce(transform.right * projectileSpeed * -1);
         this.lifetime = lifetime;
+        Destroy(gameObject, lifetime);
     }
 }
