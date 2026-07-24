@@ -70,6 +70,11 @@ public class PlayerScript : EntityScript
         {
             currentHorisontalInput += Mathf.Min(acceleration/accelerationDemodifire, horizontalInput - currentHorisontalInput);
         }
+        // Блок, запрещающий движение при нажатой кнопки лока. Если это не нужно - закомментируйте этот if
+        if (moveblock == 1) 
+        {
+            currentHorisontalInput = 0;
+        }
             isGrounded = Physics2D.OverlapCircle(GroundTransform.position, groundCheckRadius, groundLayer);
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
