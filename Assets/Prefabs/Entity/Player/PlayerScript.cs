@@ -24,13 +24,20 @@ public class PlayerScript : EntityScript
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        GroundTransform = groundCheck.transform;
+        if (Game_player == null)
+        {
+            Game_player = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        GroundTransform = groundCheck.transform;
     }
 
     private void Update()
@@ -61,6 +68,6 @@ public class PlayerScript : EntityScript
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(currentHorisontalInput * moveSpeed, rb.linearVelocity.y);
-        Debug.Log(currentHorisontalInput * moveSpeed);
+        //Debug.Log(currentHorisontalInput * moveSpeed);
     }
 }
