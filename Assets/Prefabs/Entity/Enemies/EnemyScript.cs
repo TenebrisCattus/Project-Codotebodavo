@@ -3,6 +3,8 @@ using UnityEngine.EventSystems;
 
 public class EnemyScript : EntityScript
 {
+    [Header("Movement Settings")]
+    [SerializeField] private float speed;
     [Header("Obstacle Layer")]
     [SerializeField] private LayerMask obstacleLayer;
 
@@ -43,5 +45,15 @@ public class EnemyScript : EntityScript
     public bool IsPlayerRight() 
     {
         return isPlayerRight;
+    }
+
+    public float GetSpeed()
+    {
+        return speed;
+    }
+
+    public void SetSpeed(float speed)
+    {
+        this.speed = speed;
     }
 }
