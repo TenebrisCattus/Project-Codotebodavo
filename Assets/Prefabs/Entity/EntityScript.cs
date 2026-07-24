@@ -30,6 +30,12 @@ public class EntityScript : MonoBehaviour
         }
     }
 
+    //ѕри переписывании GiveDamage в рамках дочернего класса использовать SetHP ќЅя«ј“≈Ћ№Ќќ
+    public virtual void GiveDamage(float damage)
+    {
+        SetHP(GetHP() - damage);
+    }
+
     public virtual void Death()
     {
         Destroy(gameObject);

@@ -5,15 +5,22 @@ public class EnemyScript : EntityScript
 {
     [Header("AI Settings")]
     [SerializeField] private float reactionRadius;
+    [SerializeField] private bool dealDamageWhenTouched;
+    [SerializeField] private float attackDelay;
     [Header("Movement Settings")]
     [SerializeField] private float speed;
     [Header("Obstacle Layer")]
     [SerializeField] private LayerMask obstacleLayer;
 
+    private float nextTimeForAttack;
     private float destinatonToPlayerX;
     private bool isPlayerRight;
 
     private void Update()
+    {
+        FindPlayerRightAndDestinaton();
+    }
+    public void FindPlayerRightAndDestinaton()
     {
         destinatonToPlayerX = PlayerScript.Game_player.transform.position.x - transform.position.x;
         if (destinatonToPlayerX > 0)
@@ -23,7 +30,7 @@ public class EnemyScript : EntityScript
         else
         {
             isPlayerRight = false;
-        } 
+        }
     }
 
     public bool SeePlayer()
@@ -31,11 +38,11 @@ public class EnemyScript : EntityScript
         RaycastHit2D hit = Physics2D.Linecast(transform.position, PlayerScript.Game_player.transform.position, obstacleLayer);
         if (hit.collider == null)
         {
-            return true; // Прямая видимость есть
+            return true;
         }
         else
         {
-            return false; // На пути есть препятствие
+            return false;
         }
     }
 
@@ -60,4 +67,13 @@ public class EnemyScript : EntityScript
     }
 
     public float ReactionRadius() {  return reactionRadius; }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && dealDamageWhenTouched && Time.time > nextTimeForAttack)
+        {
+            PlayerScript.Game_player.GiveDamage(0.33f);
+            nextTimeForAttack = Time.time + attackDelay;
+        }
+    }
 }

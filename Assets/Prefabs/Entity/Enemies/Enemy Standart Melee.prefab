@@ -48,12 +48,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6070630219311304764, guid: ce50bea70ce2665429233ef334e1eddb, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7936058227315377990, guid: ce50bea70ce2665429233ef334e1eddb, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Enemy Standart Melee
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2737595379247343318, guid: ce50bea70ce2665429233ef334e1eddb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7936058227315377990, guid: ce50bea70ce2665429233ef334e1eddb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -921272596372755117}
   m_SourcePrefab: {fileID: 100100000, guid: ce50bea70ce2665429233ef334e1eddb, type: 3}
+--- !u!1 &5152108407176572064 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7936058227315377990, guid: ce50bea70ce2665429233ef334e1eddb, type: 3}
+  m_PrefabInstance: {fileID: 2980676679197993958}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-921272596372755117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152108407176572064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfcc7250beeeabe448c0c1a253aa016a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyStandartMeleeScript
+  HP: 1
+  MaxHP: 1
+  reactionRadius: 10
+  dealDamageWhenTouched: 1
+  attackDelay: 1
+  speed: 5
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 1
