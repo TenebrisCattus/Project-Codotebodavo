@@ -71,7 +71,7 @@ public class PlayerScript : EntityScript
             currentHorisontalInput += Mathf.Min(acceleration/accelerationDemodifire, horizontalInput - currentHorisontalInput);
         }
         // Блок, запрещающий движение при нажатой кнопки лока. Если это не нужно - закомментируйте этот if
-        if (moveblock == 1) 
+        if (moveblock == 1 && isGrounded) 
         {
             currentHorisontalInput = 0;
         }
