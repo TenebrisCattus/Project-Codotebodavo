@@ -7,9 +7,13 @@ public class EntityScript : MonoBehaviour
     [SerializeField] private float HP = 1.0f;
     [SerializeField] private float MaxHP = 1.0f;
 
+    private Rigidbody2D rb;
+    private Collider2D collider;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        collider = GetComponent<Collider2D>();
     }
 
     void Update()
@@ -38,5 +42,15 @@ public class EntityScript : MonoBehaviour
     public virtual void Death()
     {
         Destroy(gameObject);
+    }
+
+    public Rigidbody2D GetRB()
+    {
+        return rb;
+    }
+
+    public Collider2D GetCollider() 
+    { 
+        return collider;
     }
 }
