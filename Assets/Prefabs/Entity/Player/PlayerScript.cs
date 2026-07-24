@@ -63,17 +63,25 @@ public class PlayerScript : EntityScript
         horizontalInput = Input.GetAxisRaw("Horizontal");
         if (horizontalInput < currentHorisontalInput)
         {
-            RightSight = false;
+
             currentHorisontalInput -= Mathf.Min(acceleration/accelerationDemodifire, currentHorisontalInput - horizontalInput);
         } else if (horizontalInput > currentHorisontalInput)
         {
-            RightSight = true;
             currentHorisontalInput += Mathf.Min(acceleration/accelerationDemodifire, horizontalInput - currentHorisontalInput);
         }
             isGrounded = Physics2D.OverlapCircle(GroundTransform.position, groundCheckRadius, groundLayer);
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
+
+        if (horizontalInput == -1)
+        {
+            RightSight = false;
+        }
+        else if (horizontalInput == 1)
+        {
+            RightSight = true;
         }
 
         if ((Input.GetAxisRaw("Fire1")) == 1)
@@ -88,14 +96,15 @@ public class PlayerScript : EntityScript
             default:
                 if(RightSight)
                 {
-                    sightDirection = 0f;
-                }
-                else
-                {
                     sightDirection = 180f;
+                }
+                else if(!RightSight)
+                {
+                    sightDirection = 0f;
                 }         
                 break;
         }
+        Debug.Log(RightSight);
     }
     private void FireProjectile()
     {
