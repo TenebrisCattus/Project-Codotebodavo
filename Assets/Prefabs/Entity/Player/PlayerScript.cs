@@ -28,6 +28,7 @@ public class PlayerScript : EntityScript
     private Transform GroundTransform;
     private float accelerationDemodifire;
     private float sightDirection;
+    private float moveblock;
 
     public static PlayerScript Game_player { get; private set; }
 
@@ -59,13 +60,13 @@ public class PlayerScript : EntityScript
         { 
             accelerationDemodifire = airModifire;
         }
-
+        moveblock = Input.GetAxisRaw("Moveblock");
         horizontalInput = Input.GetAxisRaw("Horizontal");
-        if (horizontalInput < currentHorisontalInput)
+        if (horizontalInput < currentHorisontalInput && moveblock != 1)
         {
 
             currentHorisontalInput -= Mathf.Min(acceleration/accelerationDemodifire, currentHorisontalInput - horizontalInput);
-        } else if (horizontalInput > currentHorisontalInput)
+        } else if (horizontalInput > currentHorisontalInput && moveblock != 1)
         {
             currentHorisontalInput += Mathf.Min(acceleration/accelerationDemodifire, horizontalInput - currentHorisontalInput);
         }
@@ -88,8 +89,8 @@ public class PlayerScript : EntityScript
         {
             FireProjectile();
         }
-        UpDownSightInput = Input.GetAxisRaw("Sight(UP/DOWN)");
-        LeftRightSightInput = Input.GetAxisRaw("Sight(LEFT/RIGHT)");
+        UpDownSightInput = Input.GetAxisRaw("Vertical");
+        LeftRightSightInput = Input.GetAxisRaw("Horizontal");
 
         switch (UpDownSightInput, LeftRightSightInput)
         {
@@ -102,6 +103,30 @@ public class PlayerScript : EntityScript
                 {
                     sightDirection = 0f;
                 }         
+                break;
+            case ( 0, 1):
+                sightDirection = 180f;
+                break;
+            case (0, -1):
+                sightDirection = 0f;
+                break;
+            case (-1, 0):
+                sightDirection = 90f;
+                break;
+            case (1, 0):
+                sightDirection = 270f;
+                break;
+            case (1, 1):
+                sightDirection = 225f;
+                break;
+            case (-1, -1):
+                sightDirection = 45f;
+                break;
+            case (1, -1):
+                sightDirection = 315f;
+                break;
+            case (-1, 1):
+                sightDirection = 135f;
                 break;
         }
         Debug.Log(RightSight);
