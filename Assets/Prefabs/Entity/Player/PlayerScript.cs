@@ -195,4 +195,11 @@ public class PlayerScript : EntityScript
     {
         GetRB().linearVelocity = new Vector2(currentHorisontalInput * moveSpeed, GetRB().linearVelocity.y);
     }
+
+    public string GetCurrentWeapon() { return CurrectWeapon; }
+
+    public int[] EveryAmmo()
+    {
+        return new int[] { PistolAmmo, SMGAmmo, ShotgunAmmo, BMGAmmo };
+    }
 }
