@@ -76,4 +76,9 @@ public class EnemyScript : EntityScript
             nextTimeForAttack = Time.time + attackDelay;
         }
     }
+
+    public float GetAttackDelay()
+    {
+        return attackDelay;
+    }
 }

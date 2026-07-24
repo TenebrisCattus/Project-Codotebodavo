@@ -56,8 +56,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Standart Ranged
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2737595379247343318, guid: ce50bea70ce2665429233ef334e1eddb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7936058227315377990, guid: ce50bea70ce2665429233ef334e1eddb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1415917960117231773}
   m_SourcePrefab: {fileID: 100100000, guid: ce50bea70ce2665429233ef334e1eddb, type: 3}
+--- !u!1 &114168967429245157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7936058227315377990, guid: ce50bea70ce2665429233ef334e1eddb, type: 3}
+  m_PrefabInstance: {fileID: 8049928126375743395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-1415917960117231773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114168967429245157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6c5bbff415e7f43a7c71e080e77100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyStandartRangedScript
+  HP: 1
+  MaxHP: 1
+  reactionRadius: 10
+  dealDamageWhenTouched: 1
+  attackDelay: 1
+  speed: 4
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  Projectile: {fileID: 6806987864797394368, guid: fbf62fefdad4d274db51ba93298eea55, type: 3}
+  ProjectileSprite: {fileID: 7482667652216324306, guid: a970a03747bfd25409575da75514faad, type: 3}
