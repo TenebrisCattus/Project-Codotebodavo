@@ -6,7 +6,7 @@ public class ProjectileScript : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private float lifetime;
-    void Start()
+    void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
