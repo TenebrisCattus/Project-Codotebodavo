@@ -193,7 +193,14 @@ public class PlayerScript : EntityScript
 
     private void FixedUpdate()
     {
-        GetRB().linearVelocity = new Vector2(currentHorisontalInput * moveSpeed, GetRB().linearVelocity.y);
+        GetRB().linearVelocity += new Vector2(horizontalInput*acceleration*0.1f, 0);
+        if (GetRB().linearVelocity.x > moveSpeed)
+        {
+            GetRB().linearVelocity = new Vector2(moveSpeed, GetRB().linearVelocity.y);
+        }else if (GetRB().linearVelocity.x < moveSpeed * -1)
+        {
+            GetRB().linearVelocity = new Vector2(moveSpeed * -1, GetRB().linearVelocity.y);
+        }
     }
 
     public string GetCurrentWeapon() { return CurrectWeapon; }

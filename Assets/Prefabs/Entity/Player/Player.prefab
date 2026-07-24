@@ -280,9 +280,9 @@ MonoBehaviour:
   HP: 1
   MaxHP: 1
   groundCheck: {fileID: 8696478615125689932}
-  moveSpeed: 8
+  moveSpeed: 1000
   jumpForce: 16
-  acceleration: 0.005
+  acceleration: 8
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2

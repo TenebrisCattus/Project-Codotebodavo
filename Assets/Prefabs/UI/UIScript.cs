@@ -23,7 +23,7 @@ public class UIScript : MonoBehaviour
     private int[] ammoes;
     void Start()
     {
-        
+        MaxHP = PlayerScript.Game_player.GetMaxHP();
     }
 
     void Update()
@@ -36,8 +36,7 @@ public class UIScript : MonoBehaviour
 
     private void SetAllVarFromPlayer()
     {
-        currentRealHP = PlayerScript.Game_player.GetHP();
-        MaxHP = PlayerScript.Game_player.GetMaxHP();
+        currentRealHP = PlayerScript.Game_player.GetHP()/MaxHP;
         currentWeapon = PlayerScript.Game_player.GetCurrentWeapon();
         ammoes = PlayerScript.Game_player.EveryAmmo();
     }
