@@ -84,7 +84,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyScript
   HP: 1
   MaxHP: 1
-  reactionRadius: 1000
+  reactionRadius: 1
+  dealDamageWhenTouched: 0
+  attackDelay: 1
   speed: 1
   obstacleLayer:
     serializedVersion: 2

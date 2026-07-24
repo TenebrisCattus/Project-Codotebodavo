@@ -10,16 +10,17 @@ public class EnemyStandartMeleeScript : EnemyScript
     }
     private void Update()
     {
+        FindPlayerRightAndDestinaton();
         if (SeePlayer() && DestinatonToPlayer() < ReactionRadius())
         {
             if (IsPlayerRight())
             {
                 rb.linearVelocityX = GetSpeed();
             }
-        }
-        else 
-        {
-            rb.linearVelocityX = GetSpeed() * -1;
+            else
+            {
+                rb.linearVelocityX = GetSpeed() * -1;
+            }
         }
     }
 }
