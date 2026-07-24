@@ -33,13 +33,20 @@ public class PlayerScript : EntityScript
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        GroundTransform = groundCheck.transform;
+        if (Game_player == null)
+        {
+            Game_player = GetComponent<PlayerScript>();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        GroundTransform = groundCheck.transform;
     }
 
     private void Update()

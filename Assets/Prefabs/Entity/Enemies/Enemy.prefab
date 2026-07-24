@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4210226005989817169, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6268432836701865350, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -80,3 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyScript
   HP: 1
   MaxHP: 1
+  target: {fileID: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
