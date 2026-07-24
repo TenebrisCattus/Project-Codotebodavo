@@ -134,11 +134,13 @@ public class PlayerScript : EntityScript
 
             }
         }
-        if ((Input.GetAxisRaw("WeaponDrop")) == 1)
+        if ((Input.GetAxisRaw("WeaponDrop")) == 1 && CurrectWeapon != "none")
         {
             CurrectWeapon = "none";
             SmgFireDelay = 0;
             PistolFireDelay = 0;
+            ShotgunFireDelay = 0;
+            Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection)).GetComponent<ProjectileScript>().SetStartConditions(1000, 5, ProjectileSprite, 0.50f);
         }
 
         Debug.Log(CurrectWeapon);
