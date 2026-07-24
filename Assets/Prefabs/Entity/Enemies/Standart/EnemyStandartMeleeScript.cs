@@ -13,7 +13,7 @@ public class EnemyStandartMeleeScript : EnemyScript
         GoToPlayer();
     }
 
-    private void GoToPlayer()
+    public void GoToPlayer()
     {
         if (SeePlayer() && DestinatonToPlayer() < ReactionRadius())
         {

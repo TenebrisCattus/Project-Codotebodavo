@@ -12,14 +12,10 @@ public class EnemyStandartRangedScript : EnemyScript
     {
         Flip();
         FindPlayerRightAndDestinaton();
-        if (SeePlayer() && DestinatonToPlayer() < ReactionRadius() && Time.time > nextTimeForAttackRanged)
-        {
-            Instantiate(Projectile, transform.position, transform.rotation).GetComponent<ProjectileScript>().SetStartConditions(1000, 10, ProjectileSprite);
-            nextTimeForAttackRanged = Time.time + GetAttackDelay();
-        }
+        Fire();
     }
 
-    private void Flip()
+    public void Flip()
     {
         if (IsPlayerRight())
         {
@@ -28,6 +24,14 @@ public class EnemyStandartRangedScript : EnemyScript
         else 
         {
             transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, transform.eulerAngles.z);
+        }
+    }
+    public void Fire()
+    {
+        if (SeePlayer() && DestinatonToPlayer() < ReactionRadius() && Time.time > nextTimeForAttackRanged)
+        {
+            Instantiate(Projectile, transform.position, transform.rotation).GetComponent<ProjectileScript>().SetStartConditions(1000, 10, ProjectileSprite);
+            nextTimeForAttackRanged = Time.time + GetAttackDelay();
         }
     }
 }

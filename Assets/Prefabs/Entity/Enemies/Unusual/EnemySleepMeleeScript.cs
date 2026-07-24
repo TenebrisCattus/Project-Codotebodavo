@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemySleepMeleeScript : EnemyScript
+public class EnemySleepMeleeScript : EnemyStandartMeleeScript
 {
     private bool isTouched;
 
@@ -18,20 +18,6 @@ public class EnemySleepMeleeScript : EnemyScript
         else if (GetHP() < GetMaxHP())
         {
             OnTouched();
-        }
-    }
-    private void GoToPlayer()
-    {
-        if (SeePlayer() && DestinatonToPlayer() < ReactionRadius())
-        {
-            if (IsPlayerRight())
-            {
-                GetRB().linearVelocityX = GetSpeed();
-            }
-            else
-            {
-                GetRB().linearVelocityX = GetSpeed() * -1;
-            }
         }
     }
 

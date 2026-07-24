@@ -8,6 +8,7 @@ public class EntityScript : MonoBehaviour
     [SerializeField] private float MaxHP = 1.0f;
 
     private Rigidbody2D rb;
+    private Collider2D collision;
 
     void Update()
     {
@@ -50,4 +51,6 @@ public class EntityScript : MonoBehaviour
 
     public Rigidbody2D GetRB() {  return rb; }
     public void SetRB(Rigidbody2D rb) { this.rb = rb; }
+    public Collider2D GetCollider() { return collision; }
+    public void SetCollider(Collider2D collision) { this.collision = collision; }
 }
