@@ -8,7 +8,7 @@ public class PlayerScript : EntityScript
 {
     [Header("Links to internal objects")]
     [SerializeField] private GameObject groundCheck;
-    [SerializeField] private CaseScript caseScript;
+    [SerializeField] private GameObject caseWeapon;
     [Header("Movement settings")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
@@ -22,8 +22,16 @@ public class PlayerScript : EntityScript
     [Header("Damage settings")]
     [SerializeField] private float invulnerability;
     [SerializeField] private float stun;
+    [Header("Item settings")]
+    [SerializeField] private float energyDelay;
+    [SerializeField] private float energyTimeSave;
+    [SerializeField] private float energyCost;
+    [SerializeField] private float restDelay;
+    [SerializeField] private float restHP;
+    [SerializeField] private int restCost;
+    [SerializeField] private float CoolDown;
 
-
+    private float timerPeriod = 1;
     private float horizontalInput;
     private float UpDownSightInput;
     private float LeftRightSightInput;
@@ -34,6 +42,8 @@ public class PlayerScript : EntityScript
     private float accelerationDemodifire;
     private float sightDirection;
     private float moveblock;
+    private bool attackblockRoEUsed;
+    private bool canRestOrEnergy;
     private float PistolFireDelay;
     private float SmgFireDelay;
     private float ShotgunFireDelay;
@@ -63,9 +73,11 @@ public class PlayerScript : EntityScript
 
     private void Start()
     {
+        attackblockRoEUsed = false;
+        canRestOrEnergy = true;
         SetRB(GetComponent<Rigidbody2D>());
         GroundTransform = groundCheck.transform;
-        Invoke("CountDownTheTimer", 1f);
+        Invoke("CountDownTheTimer", timerPeriod);
     }
 
     private void Update()
@@ -73,8 +85,8 @@ public class PlayerScript : EntityScript
         MovementUpdate();
         BattleUpdate();
         CaseAttack();
-
-
+        ItemManager();
+        RightSidePositionManager();
     }
     public string GetCurrectWeapon()
     {
@@ -83,7 +95,7 @@ public class PlayerScript : EntityScript
 
     private void FixedUpdate()
     {
-        if (moveblock == 0) { GetRB().linearVelocity += new Vector2(horizontalInput * acceleration * 0.1f, 0); }
+        if (moveblock == 0 && !attackblockRoEUsed) { GetRB().linearVelocity += new Vector2(horizontalInput * acceleration * 0.1f, 0); }
         if (GetRB().linearVelocity.x > moveSpeed)
         {
             GetRB().linearVelocity = new Vector2(moveSpeed, GetRB().linearVelocity.y);
@@ -102,7 +114,7 @@ public class PlayerScript : EntityScript
 
     private void BattleUpdate()
     {
-        if ((Input.GetAxisRaw("Fire1")) == 1)
+        if ((Input.GetAxisRaw("Fire1")) == 1 && !attackblockRoEUsed)
         {
             if (Time.time >= PistolFireDelay && CurrectWeapon == "Wep_Pistol" && PistolAmmo > 0)
             {
@@ -181,7 +193,7 @@ public class PlayerScript : EntityScript
             currentHorisontalInput = 0;
         }
         isGrounded = Physics2D.OverlapCircle(GroundTransform.position, groundCheckRadius, groundLayer);
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && !attackblockRoEUsed)
         {
             GetRB().linearVelocity = new Vector2(GetRB().linearVelocity.x, jumpForce);
         }
@@ -240,7 +252,7 @@ public class PlayerScript : EntityScript
     private void CountDownTheTimer()
     {
         timer--;
-        Invoke("CountDownTheTimer", 1f);
+        Invoke("CountDownTheTimer", timerPeriod);
     }
 
     public void SetTimer(int timer)
@@ -256,11 +268,11 @@ public class PlayerScript : EntityScript
     public override void GiveDamage(float damage)
     {
         base.GiveDamage(damage);
-        ActivateInvulnerability();
+        ActivateInvulnerability(invulnerability);
 
     }
 
-    private void ActivateInvulnerability()
+    private void ActivateInvulnerability(float invulnerability)
     {
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
         Invoke("DeactivateInvulnerability", invulnerability);
@@ -272,15 +284,82 @@ public class PlayerScript : EntityScript
 
     private void CaseAttack()
     {
-        if (Input.GetAxisRaw("CaseAttack") == 1 && caseScript.InTrigger().Count > 0)
+        if (Input.GetAxisRaw("CaseAttack") == 1 && caseWeapon.GetComponent<CaseScript>().InTrigger().Count > 0 && !attackblockRoEUsed)
         {
-            foreach (Collider2D col in caseScript.InTrigger())
+            foreach (Collider2D col in caseWeapon.GetComponent<CaseScript>().InTrigger())
             {
                 if (col.gameObject.CompareTag("Enemy"))
                 {
                     col.gameObject.GetComponent<EnemyScript>().Stun(stun);
                 }
             }
+        }
+    }
+
+    private void ItemManager()
+    {
+        if (Input.GetAxisRaw("Energy") == 1 && canRestOrEnergy)
+        {
+            attackblockRoEUsed = true;
+            canRestOrEnergy = false;
+            EnergyUse();
+            Invoke("ItemCooldownEnd", CoolDown);
+        }
+        else if (Input.GetAxisRaw("Heal") == 1 && canRestOrEnergy)
+        {
+            attackblockRoEUsed = true;
+            canRestOrEnergy = false;
+            RestUse();
+            Invoke("ItemCooldownEnd", CoolDown);
+        }
+    }
+
+    private void ItemCooldownEnd()
+    {
+        canRestOrEnergy = true;
+    }
+
+    private void EnergyUse()
+    {
+        timerPeriod = 10;
+        ActivateInvulnerability(energyDelay);
+        Invoke("EnergyUseEnd", energyDelay);
+    }
+
+    private void EnergyUseEnd()
+    {
+        GiveDamage(energyCost);
+        attackblockRoEUsed = false;
+        Invoke("EnergyEffectEnd", energyTimeSave-energyDelay);
+    }
+
+    private void EnergyEffectEnd()
+    {
+        timerPeriod = 1;
+    }
+
+    private void RestUse()
+    {
+        timer -= restCost;
+        ActivateInvulnerability(restDelay);
+        Invoke("RestUseEnd", restDelay);
+    }
+
+    private void RestUseEnd()
+    {
+        GiveDamage(restHP * -1);
+        attackblockRoEUsed = false;
+    }
+
+    private void RightSidePositionManager()
+    {
+        if (RightSight)
+        {
+            caseWeapon.transform.localPosition = new Vector3(1.25f, caseWeapon.transform.localPosition.y, caseWeapon.transform.localPosition.z);
+        }
+        else
+        {
+            caseWeapon.transform.localPosition = new Vector3(-1.25f, caseWeapon.transform.localPosition.y, caseWeapon.transform.localPosition.z);
         }
     }
 }
