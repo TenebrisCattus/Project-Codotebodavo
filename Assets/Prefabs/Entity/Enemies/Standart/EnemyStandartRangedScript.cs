@@ -28,7 +28,7 @@ public class EnemyStandartRangedScript : EnemyScript
     }
     public void Fire()
     {
-        if (SeePlayer() && DestinatonToPlayer() < ReactionRadius() && Time.time > nextTimeForAttackRanged)
+        if (SeePlayer() && DestinatonToPlayer() < ReactionRadius() && Time.time > nextTimeForAttackRanged && !GetStunned())
         {
             Instantiate(Projectile, transform.position, transform.rotation).GetComponent<ProjectileScript>().SetStartConditions(1000, 10, ProjectileSprite, GetDamage(), 0, true);
             nextTimeForAttackRanged = Time.time + GetAttackDelay();

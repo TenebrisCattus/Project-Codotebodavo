@@ -18,6 +18,7 @@ public class EnemyScript : EntityScript
     private bool isPlayerRight;
     private float speed;
     private float damage;
+    private bool stunned;
 
     private void Awake()
     {
@@ -94,6 +95,7 @@ public class EnemyScript : EntityScript
 
     public void Stun(float stunLenght)
     {
+        stunned = true;
         speed = 0;
         damage = 0;
         Invoke("StopStun", stunLenght);
@@ -101,8 +103,14 @@ public class EnemyScript : EntityScript
 
     private void StopStun()
     {
+        stunned = false;
         speed = standartSpeed;
         damage = standartDamage;
+    }
+
+    public bool GetStunned()
+    {
+        return stunned;
     }
 
     public float GetDamage()
