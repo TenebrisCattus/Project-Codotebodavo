@@ -11,6 +11,7 @@ public class PlayerScript : EntityScript
     [SerializeField] private GameObject caseWeapon;
     [SerializeField] private GameObject Torso;
     [SerializeField] private GameObject Legs;
+    [SerializeField] private GameObject Effect;
     [Header("Movement settings")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
@@ -53,7 +54,9 @@ public class PlayerScript : EntityScript
     private string CurrectWeapon = "Wep_Shotgun";
     private Animator TorsoAnim;
     private Animator LegsAnim;
+    private Animator EffectAnim;
     private Vector3 currentRotation;
+    private float caseTimer;
 
     private int PistolAmmo = 10;
     private int SMGAmmo = 30;
@@ -80,6 +83,7 @@ public class PlayerScript : EntityScript
     {
         TorsoAnim = Torso.GetComponent<Animator>();
         LegsAnim = Legs.GetComponent<Animator>();
+        EffectAnim = Effect.GetComponent<Animator>();
         attackblockRoEUsed = false;
         canRestOrEnergy = true;
         SetRB(GetComponent<Rigidbody2D>());
@@ -301,10 +305,11 @@ public class PlayerScript : EntityScript
 
     private void CaseAttack()
     {
-        if (Input.GetAxisRaw("CaseAttack") == 1 && !attackblockRoEUsed)
+        if (Input.GetAxisRaw("CaseAttack") == 1 && !attackblockRoEUsed && Time.time > caseTimer)
         {
-            UnityEngine.Debug.Log("AAA");
+            caseTimer = Time.time+1;
             TorsoAnim.SetTrigger("CaseAttack");
+            EffectAnim.SetTrigger("Start");
             if (caseWeapon.GetComponent<CaseScript>().InTrigger().Count > 0)
             {
                 foreach (Collider2D col in caseWeapon.GetComponent<CaseScript>().InTrigger())
@@ -381,6 +386,7 @@ public class PlayerScript : EntityScript
             caseWeapon.transform.localPosition = new Vector3(1.25f, caseWeapon.transform.localPosition.y, caseWeapon.transform.localPosition.z);
             TorsoAnim.SetBool("Right", true);
             LegsAnim.SetBool("Right", true);
+            EffectAnim.SetBool("Right", true);
             currentRotation = Torso.transform.eulerAngles;
             currentRotation.y = 0f;
             Torso.transform.eulerAngles = currentRotation;
@@ -393,6 +399,7 @@ public class PlayerScript : EntityScript
             caseWeapon.transform.localPosition = new Vector3(-1.25f, caseWeapon.transform.localPosition.y, caseWeapon.transform.localPosition.z);
             TorsoAnim.SetBool("Right", false);
             LegsAnim.SetBool("Right", false);
+            EffectAnim.SetBool("Right", false);
             currentRotation = Torso.transform.eulerAngles;
             currentRotation.y = 180f;
             Torso.transform.eulerAngles = currentRotation;
