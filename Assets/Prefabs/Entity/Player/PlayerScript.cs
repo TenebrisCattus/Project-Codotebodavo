@@ -2,11 +2,13 @@ using System;
 using System.Diagnostics;
 using Unity.Mathematics;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PlayerScript : EntityScript
 {
     [Header("Links to internal objects")]
     [SerializeField] private GameObject groundCheck;
+    [SerializeField] private CaseScript caseScript;
     [Header("Movement settings")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
@@ -19,6 +21,7 @@ public class PlayerScript : EntityScript
     [SerializeField] private Sprite ProjectileSprite;
     [Header("Damage settings")]
     [SerializeField] private float invulnerability;
+    [SerializeField] private float stun;
 
 
     private float horizontalInput;
@@ -69,6 +72,7 @@ public class PlayerScript : EntityScript
     {
         MovementUpdate();
         BattleUpdate();
+        CaseAttack();
     }
 
     private void FixedUpdate()
@@ -250,5 +254,19 @@ public class PlayerScript : EntityScript
     private void DeactivateInvulnerability()
     {
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
+    }
+
+    private void CaseAttack()
+    {
+        if (Input.GetAxisRaw("CaseAttack") == 1 && caseScript.InTrigger().Count > 0)
+        {
+            foreach (Collider2D col in caseScript.InTrigger())
+            {
+                if (col.gameObject.CompareTag("Enemy"))
+                {
+                    col.gameObject.GetComponent<EnemyScript>().Stun(stun);
+                }
+            }
+        }
     }
 }
