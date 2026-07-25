@@ -1,5 +1,8 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+
+
 
 public class EnemyScript : EntityScript
 {
@@ -13,12 +16,20 @@ public class EnemyScript : EntityScript
     [Header("Obstacle Layer")]
     [SerializeField] private LayerMask obstacleLayer;
 
+    [Header("Loot")]
+    [SerializeField] private GameObject Pistol;
+    [SerializeField] private GameObject SMG;
+    [SerializeField] private GameObject Shotgun;
+    [SerializeField] private GameObject BMG;
+
     private float nextTimeForAttack;
     private float destinatonToPlayerX;
     private bool isPlayerRight;
     private float speed;
     private float damage;
     private bool stunned;
+    private bool hasweapon = true;
+
 
     private void Awake()
     {
@@ -98,7 +109,13 @@ public class EnemyScript : EntityScript
         stunned = true;
         speed = 0;
         damage = 0;
+        if (hasweapon)
+        {
+            hasweapon = false;
+            DropLoot();
+        }
         Invoke("StopStun", stunLenght);
+        
     }
 
     private void StopStun()
@@ -117,6 +134,31 @@ public class EnemyScript : EntityScript
     {
         return damage;
     }
+    public void DropLoot()
+    {
 
+        int lootChance = Random.Range(0, 100);
+
+        if (lootChance > 20 && lootChance <= 50)
+        {
+            Instantiate(Pistol, transform.position, transform.rotation);
+        }
+        else if (lootChance > 50 && lootChance <= 80)
+        {
+            int lootChance2 = Random.Range(0, 1);
+            if (lootChance2 == 0)
+            {
+                Instantiate(SMG, transform.position, transform.rotation);
+            }
+            else if (lootChance2 == 1)
+            {
+                Instantiate(Shotgun, transform.position, transform.rotation);
+            }        
+        }
+        else if (lootChance > 80)
+        {
+            Instantiate(BMG, transform.position, transform.rotation);
+        }
+    }
     public virtual void OnTouched() { }
 }
