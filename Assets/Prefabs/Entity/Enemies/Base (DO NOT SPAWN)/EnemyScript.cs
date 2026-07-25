@@ -7,14 +7,23 @@ public class EnemyScript : EntityScript
     [SerializeField] private float reactionRadius;
     [SerializeField] private bool dealDamageWhenTouched;
     [SerializeField] private float attackDelay;
+    [SerializeField] private float standartDamage;
     [Header("Movement Settings")]
-    [SerializeField] private float speed;
+    [SerializeField] private float standartSpeed;
     [Header("Obstacle Layer")]
     [SerializeField] private LayerMask obstacleLayer;
 
     private float nextTimeForAttack;
     private float destinatonToPlayerX;
     private bool isPlayerRight;
+    private float speed;
+    private float damage;
+
+    private void Awake()
+    {
+        speed = standartSpeed;
+        damage = standartDamage;
+    }
 
     private void Update()
     {
@@ -72,7 +81,7 @@ public class EnemyScript : EntityScript
     {
         if (collision.gameObject.CompareTag("Player") && dealDamageWhenTouched && Time.time > nextTimeForAttack)
         {
-            PlayerScript.Game_player.GiveDamage(0.33f);
+            PlayerScript.Game_player.GiveDamage(damage);
             nextTimeForAttack = Time.time + attackDelay;
             OnTouched();
         }
@@ -81,6 +90,19 @@ public class EnemyScript : EntityScript
     public float GetAttackDelay()
     {
         return attackDelay;
+    }
+
+    public void Stun(float stunLenght)
+    {
+        speed = 0;
+        damage = 0;
+        Invoke("StopStun", stunLenght);
+    }
+
+    private void StopStun()
+    {
+        speed = standartSpeed;
+        damage = standartDamage;
     }
 
     public virtual void OnTouched() { }

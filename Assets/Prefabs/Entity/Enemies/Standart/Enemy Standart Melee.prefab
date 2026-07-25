@@ -87,7 +87,8 @@ MonoBehaviour:
   reactionRadius: 10
   dealDamageWhenTouched: 1
   attackDelay: 1
-  speed: 5
+  standartDamage: 0.33
+  standartSpeed: 5
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 1

@@ -6,8 +6,8 @@ public class ProjectileScript : MonoBehaviour
     private float projectileSpeed;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
-    private float lifetime;
     private float damage;
+    private float stun;
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -20,13 +20,13 @@ public class ProjectileScript : MonoBehaviour
         
     }
 
-    public void SetStartConditions(float speed, float lifetime, Sprite sprite, float damage)
+    public void SetStartConditions(float speed, float lifetime, Sprite sprite, float damage, float stun)
     {
         projectileSpeed = speed;
         sr.sprite = sprite;
         rb.AddForce(transform.right * projectileSpeed * -1);
-        this.lifetime = lifetime;
         this.damage = damage;
+        this.stun = stun;
         Destroy(gameObject, lifetime);
     }
     void OnCollisionStay2D(Collision2D collision)
@@ -35,6 +35,7 @@ public class ProjectileScript : MonoBehaviour
         if (hitObject.CompareTag("Enemy"))
         {
             hitObject.GetComponent<EntityScript>().GiveDamage(damage);
+            hitObject.GetComponent<EnemyScript>().Stun(stun);
         }
         Destroy(gameObject, 0);
     }
