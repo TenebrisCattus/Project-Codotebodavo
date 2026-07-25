@@ -214,8 +214,12 @@ public class PlayerScript : EntityScript
             currentHorisontalInput = 0;
         }
         isGrounded = Physics2D.OverlapCircle(GroundTransform.position, groundCheckRadius, groundLayer);
+        LegsAnim.SetBool("OnGround", isGrounded);
+        TorsoAnim.SetBool("OnGround", isGrounded);
         if (Input.GetButtonDown("Jump") && isGrounded && !attackblockRoEUsed)
         {
+            LegsAnim.SetTrigger("Jump");
+            TorsoAnim.SetTrigger("Jump");
             GetRB().linearVelocity = new Vector2(GetRB().linearVelocity.x, jumpForce);
         }
 
