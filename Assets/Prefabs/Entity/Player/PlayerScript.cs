@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -16,6 +17,8 @@ public class PlayerScript : EntityScript
     [SerializeField] private float airModifire;
     [SerializeField] private GameObject Projectile;
     [SerializeField] private Sprite ProjectileSprite;
+    [Header("Damage settings")]
+    [SerializeField] private float invulnerability;
 
 
     private float horizontalInput;
@@ -231,5 +234,22 @@ public class PlayerScript : EntityScript
     public int GetTimer()
     {
         return timer;
+    }
+
+    public override void GiveDamage(float damage)
+    {
+        base.GiveDamage(damage);
+        ActivateInvulnerability();
+
+    }
+
+    private void ActivateInvulnerability()
+    {
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
+        Invoke("DeactivateInvulnerability", invulnerability);
+    }
+    private void DeactivateInvulnerability()
+    {
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
     }
 }
