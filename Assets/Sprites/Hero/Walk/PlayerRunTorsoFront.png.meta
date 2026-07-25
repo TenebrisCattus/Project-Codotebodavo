@@ -1,0 +1,948 @@
+fileFormatVersion: 2
+guid: c6b95351b0d15e346b6a30af230dcfc6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6761679562680328901
+    second: PlayerRunTorsoFront_0
+  - first:
+      213: -932656867084191563
+    second: PlayerRunTorsoFront_1
+  - first:
+      213: -3693767247173525058
+    second: PlayerRunTorsoFront_2
+  - first:
+      213: -4475685147694753632
+    second: PlayerRunTorsoFront_3
+  - first:
+      213: 5362198219351261368
+    second: PlayerRunTorsoFront_4
+  - first:
+      213: -8610723033624920107
+    second: PlayerRunTorsoFront_5
+  - first:
+      213: -933294940562679846
+    second: PlayerRunTorsoFront_6
+  - first:
+      213: -7551454219087030880
+    second: PlayerRunTorsoFront_7
+  - first:
+      213: -8241059393939863467
+    second: PlayerRunTorsoFront_8
+  - first:
+      213: 8175976477590154034
+    second: PlayerRunTorsoFront_9
+  - first:
+      213: -4104885284435938639
+    second: PlayerRunTorsoFront_10
+  - first:
+      213: 3194946807653868877
+    second: PlayerRunTorsoFront_11
+  - first:
+      213: -3697070194921513162
+    second: PlayerRunTorsoFront_12
+  - first:
+      213: 4809854480379048375
+    second: PlayerRunTorsoFront_13
+  - first:
+      213: 7251118545574060931
+    second: PlayerRunTorsoFront_14
+  - first:
+      213: -2436816858963949997
+    second: PlayerRunTorsoFront_15
+  - first:
+      213: -2655567476881793108
+    second: PlayerRunTorsoFront_16
+  - first:
+      213: -7464135696705625686
+    second: PlayerRunTorsoFront_17
+  - first:
+      213: 7732084064545942645
+    second: PlayerRunTorsoFront_18
+  - first:
+      213: -2083227548648943408
+    second: PlayerRunTorsoFront_19
+  - first:
+      213: 6032330248582150597
+    second: PlayerRunTorsoFront_20
+  - first:
+      213: -5840190642059770636
+    second: PlayerRunTorsoFront_21
+  - first:
+      213: 3000835429077210040
+    second: PlayerRunTorsoFront_22
+  - first:
+      213: -2957361382853746110
+    second: PlayerRunTorsoFront_23
+  - first:
+      213: 8451013780202070094
+    second: PlayerRunTorsoFront_24
+  - first:
+      213: -749092301872381755
+    second: PlayerRunTorsoFront_25
+  - first:
+      213: 2370760451564703877
+    second: PlayerRunTorsoFront_26
+  - first:
+      213: -3640409750669251877
+    second: PlayerRunTorsoFront_27
+  - first:
+      213: 2410166787593302548
+    second: PlayerRunTorsoFront_28
+  - first:
+      213: -8703283535763410156
+    second: PlayerRunTorsoFront_29
+  - first:
+      213: -8389233158628807499
+    second: PlayerRunTorsoFront_30
+  - first:
+      213: 1998185654527916922
+    second: PlayerRunTorsoFront_31
+  - first:
+      213: -8256791795334123441
+    second: PlayerRunTorsoFront_32
+  - first:
+      213: 2519763422125105809
+    second: PlayerRunTorsoFront_33
+  - first:
+      213: 8463225892856343755
+    second: PlayerRunTorsoFront_34
+  - first:
+      213: 8067021701767219625
+    second: PlayerRunTorsoFront_35
+  - first:
+      213: -2985412570417055020
+    second: PlayerRunTorsoFront_36
+  - first:
+      213: -6254573140735313628
+    second: PlayerRunTorsoFront_37
+  - first:
+      213: 5409809294243314126
+    second: PlayerRunTorsoFront_38
+  - first:
+      213: -425117611970827965
+    second: PlayerRunTorsoFront_39
+  - first:
+      213: -7201565428963968604
+    second: PlayerRunTorsoFront_40
+  - first:
+      213: -7576321451324755860
+    second: PlayerRunTorsoFront_41
+  - first:
+      213: 3530513957324023476
+    second: PlayerRunTorsoFront_42
+  - first:
+      213: 4063457671709342346
+    second: PlayerRunTorsoFront_43
+  - first:
+      213: -6717574435965702009
+    second: PlayerRunTorsoFront_44
+  - first:
+      213: 8734458180018959491
+    second: PlayerRunTorsoFront_45
+  - first:
+      213: -8275216244829335881
+    second: PlayerRunTorsoFront_46
+  - first:
+      213: 9082379364828250487
+    second: PlayerRunTorsoFront_47
+  - first:
+      213: -8680665785775400444
+    second: PlayerRunTorsoFront_48
+  - first:
+      213: 3578192278380745989
+    second: PlayerRunTorsoFront_49
+  - first:
+      213: 6521390580529901663
+    second: PlayerRunTorsoFront_50
+  - first:
+      213: 4722919643265341426
+    second: PlayerRunTorsoFront_51
+  - first:
+      213: 7931584133672185045
+    second: PlayerRunTorsoFront_52
+  - first:
+      213: 5664689089681267901
+    second: PlayerRunTorsoFront_53
+  - first:
+      213: -6316259968667826306
+    second: PlayerRunTorsoFront_54
+  - first:
+      213: -8068719745601665859
+    second: PlayerRunTorsoFront_55
+  - first:
+      213: -1443472634628066731
+    second: PlayerRunTorsoFront_56
+  - first:
+      213: 4443374032360884951
+    second: PlayerRunTorsoFront_57
+  - first:
+      213: -6816778595910501346
+    second: PlayerRunTorsoFront_58
+  - first:
+      213: 4365915621280726326
+    second: PlayerRunTorsoFront_59
+  - first:
+      213: -5360113981297300030
+    second: PlayerRunTorsoFront_60
+  - first:
+      213: -8177714174074863034
+    second: PlayerRunTorsoFront_61
+  - first:
+      213: 3500044949884943209
+    second: PlayerRunTorsoFront_62
+  - first:
+      213: -7629534059982490756
+    second: PlayerRunTorsoFront_63
+  - first:
+      213: 7136419049013441738
+    second: PlayerRunTorsoFront_64
+  - first:
+      213: -2650237114698334743
+    second: PlayerRunTorsoFront_65
+  - first:
+      213: -597055043572396405
+    second: PlayerRunTorsoFront_66
+  - first:
+      213: 4961832952131629642
+    second: PlayerRunTorsoFront_67
+  - first:
+      213: -6785629148932723161
+    second: PlayerRunTorsoFront_68
+  - first:
+      213: -2033156343516291179
+    second: PlayerRunTorsoFront_69
+  - first:
+      213: -6705160482867522842
+    second: PlayerRunTorsoFront_70
+  - first:
+      213: 7884449044356431817
+    second: PlayerRunTorsoFront_71
+  - first:
+      213: 2831550951247089903
+    second: PlayerRunTorsoFront_72
+  - first:
+      213: -5936584247469098959
+    second: PlayerRunTorsoFront_73
+  - first:
+      213: 8811071277080247743
+    second: PlayerRunTorsoFront_74
+  - first:
+      213: -2321050015869436842
+    second: PlayerRunTorsoFront_75
+  - first:
+      213: 755937476545032966
+    second: PlayerRunTorsoFront_76
+  - first:
+      213: 5154320038217031047
+    second: PlayerRunTorsoFront_77
+  - first:
+      213: -4858471518221117877
+    second: PlayerRunTorsoFront_78
+  - first:
+      213: -527684919324529814
+    second: PlayerRunTorsoFront_79
+  - first:
+      213: 4364049724892023273
+    second: PlayerRunTorsoFront_80
+  - first:
+      213: -5714414305707478746
+    second: PlayerRunTorsoFront_81
+  - first:
+      213: -3412158377820549064
+    second: PlayerRunTorsoFront_82
+  - first:
+      213: 8879328443399387211
+    second: PlayerRunTorsoFront_83
+  - first:
+      213: 4523172908695835746
+    second: PlayerRunTorsoFront_84
+  - first:
+      213: 6888927028917548277
+    second: PlayerRunTorsoFront_85
+  - first:
+      213: 5217187276902633368
+    second: PlayerRunTorsoFront_86
+  - first:
+      213: 1751865621291145024
+    second: PlayerRunTorsoFront_87
+  - first:
+      213: -679781834028505976
+    second: PlayerRunTorsoFront_88
+  - first:
+      213: -2416585115599382230
+    second: PlayerRunTorsoFront_89
+  - first:
+      213: -757796493704690815
+    second: PlayerRunTorsoFront_90
+  - first:
+      213: -4372584668518132672
+    second: PlayerRunTorsoFront_91
+  - first:
+      213: -7179158755892719299
+    second: PlayerRunTorsoFront_92
+  - first:
+      213: -7911139123738983220
+    second: PlayerRunTorsoFront_93
+  - first:
+      213: 5182951264185105454
+    second: PlayerRunTorsoFront_94
+  - first:
+      213: -5766933482042573811
+    second: PlayerRunTorsoFront_95
+  - first:
+      213: 6976824794805500413
+    second: PlayerRunTorsoFront_96
+  - first:
+      213: -7131629905644338175
+    second: PlayerRunTorsoFront_97
+  - first:
+      213: 2389623086126373479
+    second: PlayerRunTorsoFront_98
+  - first:
+      213: -7551880192854947921
+    second: PlayerRunTorsoFront_99
+  - first:
+      213: -3162336574687124535
+    second: PlayerRunTorsoFront_100
+  - first:
+      213: -1069962668890268707
+    second: PlayerRunTorsoFront_101
+  - first:
+      213: -2630299330753038843
+    second: PlayerRunTorsoFront_102
+  - first:
+      213: -4456834404350474198
+    second: PlayerRunTorsoFront_103
+  - first:
+      213: 2994570878568839316
+    second: PlayerRunTorsoFront_104
+  - first:
+      213: 6461608421802198621
+    second: PlayerRunTorsoFront_105
+  - first:
+      213: 5880123286000390134
+    second: PlayerRunTorsoFront_106
+  - first:
+      213: -3698313105635202326
+    second: PlayerRunTorsoFront_107
+  - first:
+      213: -2664829960285447402
+    second: PlayerRunTorsoFront_108
+  - first:
+      213: 5653462517297639535
+    second: PlayerRunTorsoFront_109
+  - first:
+      213: 6588614008298496882
+    second: PlayerRunTorsoFront_110
+  - first:
+      213: -5256737339841051374
+    second: PlayerRunTorsoFront_111
+  - first:
+      213: -4421017021484793369
+    second: PlayerRunTorsoFront_112
+  - first:
+      213: -5671170603974610838
+    second: PlayerRunTorsoFront_113
+  - first:
+      213: -2542102693809178720
+    second: PlayerRunTorsoFront_114
+  - first:
+      213: 3207710142511477674
+    second: PlayerRunTorsoFront_115
+  - first:
+      213: -7693522267236383056
+    second: PlayerRunTorsoFront_116
+  - first:
+      213: 6399615732589489559
+    second: PlayerRunTorsoFront_117
+  - first:
+      213: -2167851274381996031
+    second: PlayerRunTorsoFront_118
+  - first:
+      213: -7825546931379986761
+    second: PlayerRunTorsoFront_119
+  - first:
+      213: -4079179160564257243
+    second: PlayerRunTorsoFront_120
+  - first:
+      213: -3802943132148610770
+    second: PlayerRunTorsoFront_121
+  - first:
+      213: -4793392580776868279
+    second: PlayerRunTorsoFront_122
+  - first:
+      213: -8168321556552558305
+    second: PlayerRunTorsoFront_123
+  - first:
+      213: 6490935011983127885
+    second: PlayerRunTorsoFront_124
+  - first:
+      213: -7766491591695552635
+    second: PlayerRunTorsoFront_125
+  - first:
+      213: 2947994235614683704
+    second: PlayerRunTorsoFront_126
+  - first:
+      213: 3548147729059687760
+    second: PlayerRunTorsoFront_127
+  - first:
+      213: 3078622056517515454
+    second: PlayerRunTorsoFront_128
+  - first:
+      213: -7100070190314725492
+    second: PlayerRunTorsoFront_129
+  - first:
+      213: -4133612125858509011
+    second: PlayerRunTorsoFront_130
+  - first:
+      213: -306687680596925374
+    second: PlayerRunTorsoFront_131
+  - first:
+      213: -3660170509357122370
+    second: PlayerRunTorsoFront_132
+  - first:
+      213: -170783780332041716
+    second: PlayerRunTorsoFront_133
+  - first:
+      213: 43981515516097615
+    second: PlayerRunTorsoFront_134
+  - first:
+      213: -8235032225695758525
+    second: PlayerRunTorsoFront_135
+  - first:
+      213: -8343536484251665524
+    second: PlayerRunTorsoFront_136
+  - first:
+      213: -635857432941290651
+    second: PlayerRunTorsoFront_137
+  - first:
+      213: -767764577272411385
+    second: PlayerRunTorsoFront_138
+  - first:
+      213: -6131956949256663574
+    second: PlayerRunTorsoFront_139
+  - first:
+      213: 4095861115190206736
+    second: PlayerRunTorsoFront_140
+  - first:
+      213: 7210210771006526317
+    second: PlayerRunTorsoFront_141
+  - first:
+      213: -1671037945372697782
+    second: PlayerRunTorsoFront_142
+  - first:
+      213: -1448891886206096115
+    second: PlayerRunTorsoFront_143
+  - first:
+      213: 3593531896698267798
+    second: PlayerRunTorsoFront_144
+  - first:
+      213: -173066510250966127
+    second: PlayerRunTorsoFront_145
+  - first:
+      213: 6981985468702815921
+    second: PlayerRunTorsoFront_146
+  - first:
+      213: 196716482823550169
+    second: PlayerRunTorsoFront_147
+  - first:
+      213: 843556947919722681
+    second: PlayerRunTorsoFront_148
+  - first:
+      213: 6621827680072902074
+    second: PlayerRunTorsoFront_149
+  - first:
+      213: -3410844622811158805
+    second: PlayerRunTorsoFront_150
+  - first:
+      213: 5865138189620591609
+    second: PlayerRunTorsoFront_151
+  - first:
+      213: -524354020562284077
+    second: PlayerRunTorsoFront_152
+  - first:
+      213: -3574355652312356819
+    second: PlayerRunTorsoFront_153
+  - first:
+      213: -3481483870869090260
+    second: PlayerRunTorsoFront_154
+  - first:
+      213: -2259464048457738999
+    second: PlayerRunTorsoFront_155
+  - first:
+      213: -5688092409574964393
+    second: PlayerRunTorsoFront_156
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayerRunTorsoFront_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3d9b6d3340b922a0800000000000000
+      internalID: -6761679562680328901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRunTorsoFront_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b83e1455898e03f0800000000000000
+      internalID: -932656867084191563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRunTorsoFront_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb1ef35524a1dbcc0800000000000000
+      internalID: -3693767247173525058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRunTorsoFront_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a89925421c23e1c0800000000000000
+      internalID: -4475685147694753632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRunTorsoFront_4
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b00aafceda5a6a40800000000000000
+      internalID: 5362198219351261368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRunTorsoFront_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df3381c501908880800000000000000
+      internalID: -8610723033624920107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRunTorsoFront_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad7971542354c03f0800000000000000
+      internalID: -933294940562679846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRunTorsoFront_7
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a551b5a568d33790800000000000000
+      internalID: -7551454219087030880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRunTorsoFront_8
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 558815be420e1ad80800000000000000
+      internalID: -8241059393939863467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRunTorsoFront_9
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23be5b6c947e67170800000000000000
+      internalID: 8175976477590154034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRunTorsoFront_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b2b77915948807c0800000000000000
+      internalID: -4104885284435938639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRunTorsoFront_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d452a7aa13bb65c20800000000000000
+      internalID: 3194946807653868877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRunTorsoFront_12
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63fd402ee3e51bcc0800000000000000
+      internalID: -3697070194921513162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRunTorsoFront_13
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b1705c8a2900c240800000000000000
+      internalID: 4809854480379048375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRunTorsoFront_14
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 383603d26e521a460800000000000000
+      internalID: 7251118545574060931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: bb88c781baae1554c8d91e993578ead7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":3.0},"gridSpriteSize":{"x":1024.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PlayerRunTorsoFront_0: -6761679562680328901
+      PlayerRunTorsoFront_1: -932656867084191563
+      PlayerRunTorsoFront_10: -4104885284435938639
+      PlayerRunTorsoFront_11: 3194946807653868877
+      PlayerRunTorsoFront_12: -3697070194921513162
+      PlayerRunTorsoFront_13: 4809854480379048375
+      PlayerRunTorsoFront_14: 7251118545574060931
+      PlayerRunTorsoFront_2: -3693767247173525058
+      PlayerRunTorsoFront_3: -4475685147694753632
+      PlayerRunTorsoFront_4: 5362198219351261368
+      PlayerRunTorsoFront_5: -8610723033624920107
+      PlayerRunTorsoFront_6: -933294940562679846
+      PlayerRunTorsoFront_7: -7551454219087030880
+      PlayerRunTorsoFront_8: -8241059393939863467
+      PlayerRunTorsoFront_9: 8175976477590154034
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

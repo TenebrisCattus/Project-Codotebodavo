@@ -176,13 +176,15 @@ public class PlayerScript : EntityScript
     }
     private void MovementUpdate()
     {
-        if (GetRB().linearVelocity.x != 0)
+        if (Mathf.Abs(GetRB().linearVelocity.x) > 0.1f)
         {
             LegsAnim.SetBool("Run", true);
+            TorsoAnim.SetBool("Run", true);
         }
         else
         {
             LegsAnim.SetBool("Run", false);
+            TorsoAnim.SetBool("Run", false);
         }
         if (isGrounded)
         {
@@ -336,6 +338,7 @@ public class PlayerScript : EntityScript
 
     private void EnergyUse()
     {
+        TorsoAnim.SetTrigger("Energy");
         timerPeriod = 10;
         ActivateInvulnerability(energyDelay);
         Invoke("EnergyUseEnd", energyDelay);
@@ -393,4 +396,6 @@ public class PlayerScript : EntityScript
             Legs.transform.eulerAngles = currentRotation;
         }
     }
+
+
 }

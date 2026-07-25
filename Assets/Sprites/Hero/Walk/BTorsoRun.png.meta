@@ -1,0 +1,966 @@
+fileFormatVersion: 2
+guid: e5a18a32fd279b64d8dcd8fc3617e446
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8770121865254842789
+    second: BTorsoRun_0
+  - first:
+      213: -6903261845809505521
+    second: BTorsoRun_1
+  - first:
+      213: 5939865546161389843
+    second: BTorsoRun_2
+  - first:
+      213: 8758308190756652628
+    second: BTorsoRun_3
+  - first:
+      213: 7065882203509171824
+    second: BTorsoRun_4
+  - first:
+      213: -1517713154294933510
+    second: BTorsoRun_5
+  - first:
+      213: 6079898189450661677
+    second: BTorsoRun_6
+  - first:
+      213: -3448010184719992345
+    second: BTorsoRun_7
+  - first:
+      213: -6947354328898350672
+    second: BTorsoRun_8
+  - first:
+      213: -2947370123972042859
+    second: BTorsoRun_9
+  - first:
+      213: 7837580145242794200
+    second: BTorsoRun_10
+  - first:
+      213: -858005895293306011
+    second: BTorsoRun_11
+  - first:
+      213: -3213583152476191540
+    second: BTorsoRun_12
+  - first:
+      213: 6516279832225197029
+    second: BTorsoRun_13
+  - first:
+      213: 4972220187324060011
+    second: BTorsoRun_14
+  - first:
+      213: 3437170684135342487
+    second: BTorsoRun_15
+  - first:
+      213: -8477367417013984064
+    second: BTorsoRun_16
+  - first:
+      213: -249164584330289912
+    second: BTorsoRun_17
+  - first:
+      213: -2447925020012032942
+    second: BTorsoRun_18
+  - first:
+      213: -5128747245841146479
+    second: BTorsoRun_19
+  - first:
+      213: -7613210295354343581
+    second: BTorsoRun_20
+  - first:
+      213: -7139256526742826125
+    second: BTorsoRun_21
+  - first:
+      213: 3056894017431456405
+    second: BTorsoRun_22
+  - first:
+      213: -1475357220594662912
+    second: BTorsoRun_23
+  - first:
+      213: 4250810398199020397
+    second: BTorsoRun_24
+  - first:
+      213: 3953334478252367680
+    second: BTorsoRun_25
+  - first:
+      213: 4807005108322037481
+    second: BTorsoRun_26
+  - first:
+      213: -6652138490302839617
+    second: BTorsoRun_27
+  - first:
+      213: -4399309617782607007
+    second: BTorsoRun_28
+  - first:
+      213: -4878443009624552617
+    second: BTorsoRun_29
+  - first:
+      213: -6782471535176608790
+    second: BTorsoRun_30
+  - first:
+      213: 5440184074841864618
+    second: BTorsoRun_31
+  - first:
+      213: -8118534491375695373
+    second: BTorsoRun_32
+  - first:
+      213: -5892220752007114033
+    second: BTorsoRun_33
+  - first:
+      213: 1599419722083087384
+    second: BTorsoRun_34
+  - first:
+      213: -4284588488124463469
+    second: BTorsoRun_35
+  - first:
+      213: 3123170778508655871
+    second: BTorsoRun_36
+  - first:
+      213: -2438853901619216412
+    second: BTorsoRun_37
+  - first:
+      213: 2331034320318882318
+    second: BTorsoRun_38
+  - first:
+      213: -5686524875157456313
+    second: BTorsoRun_39
+  - first:
+      213: 9080901650570230028
+    second: BTorsoRun_40
+  - first:
+      213: -1014845507362879561
+    second: BTorsoRun_41
+  - first:
+      213: 7743560680958140453
+    second: BTorsoRun_42
+  - first:
+      213: 4925245760201746007
+    second: BTorsoRun_43
+  - first:
+      213: -8777713082059945097
+    second: BTorsoRun_44
+  - first:
+      213: -240779582870716574
+    second: BTorsoRun_45
+  - first:
+      213: 6040673859187770689
+    second: BTorsoRun_46
+  - first:
+      213: 7528634113481170663
+    second: BTorsoRun_47
+  - first:
+      213: 4601535943288999583
+    second: BTorsoRun_48
+  - first:
+      213: -5823992698745615420
+    second: BTorsoRun_49
+  - first:
+      213: 973876717169400744
+    second: BTorsoRun_50
+  - first:
+      213: 8475551158191454754
+    second: BTorsoRun_51
+  - first:
+      213: -6876593900458992979
+    second: BTorsoRun_52
+  - first:
+      213: -746156644195409156
+    second: BTorsoRun_53
+  - first:
+      213: -1601547055290289275
+    second: BTorsoRun_54
+  - first:
+      213: -6394450266460221728
+    second: BTorsoRun_55
+  - first:
+      213: 6252908412551382424
+    second: BTorsoRun_56
+  - first:
+      213: 8434602919410159244
+    second: BTorsoRun_57
+  - first:
+      213: -2037246952200097183
+    second: BTorsoRun_58
+  - first:
+      213: -7233934686894120130
+    second: BTorsoRun_59
+  - first:
+      213: 7142359058995491541
+    second: BTorsoRun_60
+  - first:
+      213: -4331197098847239972
+    second: BTorsoRun_61
+  - first:
+      213: -1227310474364063593
+    second: BTorsoRun_62
+  - first:
+      213: -8437674925736761513
+    second: BTorsoRun_63
+  - first:
+      213: 5117254584661384350
+    second: BTorsoRun_64
+  - first:
+      213: -4936923474955379005
+    second: BTorsoRun_65
+  - first:
+      213: 9116935759153497470
+    second: BTorsoRun_66
+  - first:
+      213: -1371242583493081672
+    second: BTorsoRun_67
+  - first:
+      213: -7465608769320716867
+    second: BTorsoRun_68
+  - first:
+      213: -2672484931631885418
+    second: BTorsoRun_69
+  - first:
+      213: -6462103502174810547
+    second: BTorsoRun_70
+  - first:
+      213: 256458674893187183
+    second: BTorsoRun_71
+  - first:
+      213: -3375558932988585145
+    second: BTorsoRun_72
+  - first:
+      213: 3588123610612073559
+    second: BTorsoRun_73
+  - first:
+      213: 599834747924992372
+    second: BTorsoRun_74
+  - first:
+      213: -7338150180110445597
+    second: BTorsoRun_75
+  - first:
+      213: 6934270733008712398
+    second: BTorsoRun_76
+  - first:
+      213: 6736861388931059717
+    second: BTorsoRun_77
+  - first:
+      213: -3189035395690778838
+    second: BTorsoRun_78
+  - first:
+      213: 8632611055773831797
+    second: BTorsoRun_79
+  - first:
+      213: -3612564040079607665
+    second: BTorsoRun_80
+  - first:
+      213: 4202321724836482422
+    second: BTorsoRun_81
+  - first:
+      213: 6681554054841374242
+    second: BTorsoRun_82
+  - first:
+      213: 7687766903894113495
+    second: BTorsoRun_83
+  - first:
+      213: -6483808715892994919
+    second: BTorsoRun_84
+  - first:
+      213: -6671454459452526406
+    second: BTorsoRun_85
+  - first:
+      213: 109109439575480085
+    second: BTorsoRun_86
+  - first:
+      213: 8866820101541416830
+    second: BTorsoRun_87
+  - first:
+      213: -2418694660000002568
+    second: BTorsoRun_88
+  - first:
+      213: 6111299034959599187
+    second: BTorsoRun_89
+  - first:
+      213: -6488203174208974205
+    second: BTorsoRun_90
+  - first:
+      213: -5374189934273233141
+    second: BTorsoRun_91
+  - first:
+      213: -7051140228839813428
+    second: BTorsoRun_92
+  - first:
+      213: -2358027760740904667
+    second: BTorsoRun_93
+  - first:
+      213: 6365978960754700422
+    second: BTorsoRun_94
+  - first:
+      213: -3100109493909672892
+    second: BTorsoRun_95
+  - first:
+      213: -7342469450030076992
+    second: BTorsoRun_96
+  - first:
+      213: 4528452398380476418
+    second: BTorsoRun_97
+  - first:
+      213: 9146985960678706201
+    second: BTorsoRun_98
+  - first:
+      213: -8031367948115653962
+    second: BTorsoRun_99
+  - first:
+      213: -5492920629499430222
+    second: BTorsoRun_100
+  - first:
+      213: -8163471131568172212
+    second: BTorsoRun_101
+  - first:
+      213: 354978487806434687
+    second: BTorsoRun_102
+  - first:
+      213: -8466319480806941214
+    second: BTorsoRun_103
+  - first:
+      213: 7398669690896096290
+    second: BTorsoRun_104
+  - first:
+      213: -4641722230077351993
+    second: BTorsoRun_105
+  - first:
+      213: 9027530147698372728
+    second: BTorsoRun_106
+  - first:
+      213: 1994283664667762000
+    second: BTorsoRun_107
+  - first:
+      213: -1569001057485128285
+    second: BTorsoRun_108
+  - first:
+      213: 770165081880781164
+    second: BTorsoRun_109
+  - first:
+      213: -5046310140164664401
+    second: BTorsoRun_110
+  - first:
+      213: -7560821615104002157
+    second: BTorsoRun_111
+  - first:
+      213: -4692619329718847653
+    second: BTorsoRun_112
+  - first:
+      213: 6000272337287514618
+    second: BTorsoRun_113
+  - first:
+      213: -6421375674543907749
+    second: BTorsoRun_114
+  - first:
+      213: 1322949390901366980
+    second: BTorsoRun_115
+  - first:
+      213: -2329176337804611453
+    second: BTorsoRun_116
+  - first:
+      213: 761149038600490867
+    second: BTorsoRun_117
+  - first:
+      213: -1921785428525183055
+    second: BTorsoRun_118
+  - first:
+      213: 6955654793804193913
+    second: BTorsoRun_119
+  - first:
+      213: -6934631794762057323
+    second: BTorsoRun_120
+  - first:
+      213: 4027002140558051159
+    second: BTorsoRun_121
+  - first:
+      213: -1820577503952549287
+    second: BTorsoRun_122
+  - first:
+      213: -2368813638603871107
+    second: BTorsoRun_123
+  - first:
+      213: -7823646246686791663
+    second: BTorsoRun_124
+  - first:
+      213: 3691545892235165426
+    second: BTorsoRun_125
+  - first:
+      213: -2620994859131153545
+    second: BTorsoRun_126
+  - first:
+      213: 6463523607879788646
+    second: BTorsoRun_127
+  - first:
+      213: -249358175079040042
+    second: BTorsoRun_128
+  - first:
+      213: 3235950939127206702
+    second: BTorsoRun_129
+  - first:
+      213: -8311410322041288423
+    second: BTorsoRun_130
+  - first:
+      213: 5495116785053339129
+    second: BTorsoRun_131
+  - first:
+      213: 6498545051815844448
+    second: BTorsoRun_132
+  - first:
+      213: -4434579449320768295
+    second: BTorsoRun_133
+  - first:
+      213: 3590364071950356297
+    second: BTorsoRun_134
+  - first:
+      213: 5514637707552284438
+    second: BTorsoRun_135
+  - first:
+      213: -39131554061299083
+    second: BTorsoRun_136
+  - first:
+      213: 4533987013982852613
+    second: BTorsoRun_137
+  - first:
+      213: -5554992637776446575
+    second: BTorsoRun_138
+  - first:
+      213: -8797328392470637239
+    second: BTorsoRun_139
+  - first:
+      213: -7498169853275322004
+    second: BTorsoRun_140
+  - first:
+      213: 6073223109745267459
+    second: BTorsoRun_141
+  - first:
+      213: -6668302221665544911
+    second: BTorsoRun_142
+  - first:
+      213: -4821720673444806564
+    second: BTorsoRun_143
+  - first:
+      213: -4861195954575104861
+    second: BTorsoRun_144
+  - first:
+      213: 6712842988491205570
+    second: BTorsoRun_145
+  - first:
+      213: 3971485926426807685
+    second: BTorsoRun_146
+  - first:
+      213: 599263691432507120
+    second: BTorsoRun_147
+  - first:
+      213: -8531102513346531692
+    second: BTorsoRun_148
+  - first:
+      213: -5435396396795076603
+    second: BTorsoRun_149
+  - first:
+      213: -8817079124631682088
+    second: BTorsoRun_150
+  - first:
+      213: -2269480092985559810
+    second: BTorsoRun_151
+  - first:
+      213: 2970277346131448717
+    second: BTorsoRun_152
+  - first:
+      213: -6692655559016355925
+    second: BTorsoRun_153
+  - first:
+      213: -6511783766712655741
+    second: BTorsoRun_154
+  - first:
+      213: -4637558553792000565
+    second: BTorsoRun_155
+  - first:
+      213: -5649463049782151811
+    second: BTorsoRun_156
+  - first:
+      213: -1265002084174730405
+    second: BTorsoRun_157
+  - first:
+      213: 5218854999367590489
+    second: BTorsoRun_158
+  - first:
+      213: 3156148988448779894
+    second: BTorsoRun_159
+  - first:
+      213: 544095397826592006
+    second: BTorsoRun_160
+  - first:
+      213: -3276275938022953657
+    second: BTorsoRun_161
+  - first:
+      213: 3509522360592475854
+    second: BTorsoRun_162
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BTorsoRun_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e499031a44a4680800000000000000
+      internalID: -8770121865254842789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BTorsoRun_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0b54012defa230a0800000000000000
+      internalID: -6903261845809505521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BTorsoRun_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31108845e34ae6250800000000000000
+      internalID: 5939865546161389843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BTorsoRun_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 456c17f55e2cb8970800000000000000
+      internalID: 8758308190756652628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BTorsoRun_4
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0762bec6d6e0f0260800000000000000
+      internalID: 7065882203509171824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BTorsoRun_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af710576defffeae0800000000000000
+      internalID: -1517713154294933510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BTorsoRun_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f4fbcc033206450800000000000000
+      internalID: 6079898189450661677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BTorsoRun_7
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e9f5dd51053620d0800000000000000
+      internalID: -3448010184719992345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BTorsoRun_8
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b1dd39eb0a069f90800000000000000
+      internalID: -6947354328898350672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BTorsoRun_9
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59f1c03fc76d817d0800000000000000
+      internalID: -2947370123972042859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BTorsoRun_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8e9d7ed9da4cc60800000000000000
+      internalID: 7837580145242794200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BTorsoRun_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56bf9d32f20c714f0800000000000000
+      internalID: -858005895293306011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BTorsoRun_12
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc40a7c262f0763d0800000000000000
+      internalID: -3213583152476191540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BTorsoRun_13
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb23d09bf97e6a50800000000000000
+      internalID: 6516279832225197029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BTorsoRun_14
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b611a7a9aefd00540800000000000000
+      internalID: 4972220187324060011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e567dd54b0e45024fb065d9759142969
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":3.0},"gridSpriteSize":{"x":1024.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      BTorsoRun_0: -8770121865254842789
+      BTorsoRun_1: -6903261845809505521
+      BTorsoRun_10: 7837580145242794200
+      BTorsoRun_11: -858005895293306011
+      BTorsoRun_12: -3213583152476191540
+      BTorsoRun_13: 6516279832225197029
+      BTorsoRun_14: 4972220187324060011
+      BTorsoRun_2: 5939865546161389843
+      BTorsoRun_3: 8758308190756652628
+      BTorsoRun_4: 7065882203509171824
+      BTorsoRun_5: -1517713154294933510
+      BTorsoRun_6: 6079898189450661677
+      BTorsoRun_7: -3448010184719992345
+      BTorsoRun_8: -6947354328898350672
+      BTorsoRun_9: -2947370123972042859
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
