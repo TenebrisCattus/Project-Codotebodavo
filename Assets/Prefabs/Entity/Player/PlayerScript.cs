@@ -73,6 +73,12 @@ public class PlayerScript : EntityScript
         MovementUpdate();
         BattleUpdate();
         CaseAttack();
+
+
+    }
+    public string GetCurrectWeapon()
+    {
+        return CurrectWeapon;
     }
 
     private void FixedUpdate()
@@ -137,10 +143,18 @@ public class PlayerScript : EntityScript
             SmgFireDelay = 0;
             PistolFireDelay = 0;
             ShotgunFireDelay = 0;
-            Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection)).GetComponent<ProjectileScript>().SetStartConditions(1000, 5, ProjectileSprite, 0, 3f, false);
+            PistolAmmo = 10;
+            SMGAmmo = 30;
+            ShotgunAmmo = 2;
+            BMGAmmo = 1;
+    Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection)).GetComponent<ProjectileScript>().SetStartConditions(1000, 5, ProjectileSprite, 0, 3f, false);
         }
     }
 
+    public void SetWeapon(String weapon)
+    {
+        CurrectWeapon = weapon;
+    }
     private void MovementUpdate()
     {
         if (isGrounded)
