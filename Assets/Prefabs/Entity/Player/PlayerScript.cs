@@ -9,6 +9,8 @@ public class PlayerScript : EntityScript
     [Header("Links to internal objects")]
     [SerializeField] private GameObject groundCheck;
     [SerializeField] private GameObject caseWeapon;
+    [SerializeField] private GameObject Torso;
+    [SerializeField] private GameObject Legs;
     [Header("Movement settings")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
@@ -49,6 +51,9 @@ public class PlayerScript : EntityScript
     private float ShotgunFireDelay;
     private float BMGFireDelay;
     private string CurrectWeapon = "Wep_Shotgun";
+    private Animator TorsoAnim;
+    private Animator LegsAnim;
+    private Vector3 currentRotation;
 
     private int PistolAmmo = 10;
     private int SMGAmmo = 30;
@@ -73,6 +78,8 @@ public class PlayerScript : EntityScript
 
     private void Start()
     {
+        TorsoAnim = Torso.GetComponent<Animator>();
+        LegsAnim = Legs.GetComponent<Animator>();
         attackblockRoEUsed = false;
         canRestOrEnergy = true;
         SetRB(GetComponent<Rigidbody2D>());
@@ -169,6 +176,14 @@ public class PlayerScript : EntityScript
     }
     private void MovementUpdate()
     {
+        if (GetRB().linearVelocity.x != 0)
+        {
+            LegsAnim.SetBool("Run", true);
+        }
+        else
+        {
+            LegsAnim.SetBool("Run", false);
+        }
         if (isGrounded)
         {
             accelerationDemodifire = 1;
@@ -356,10 +371,26 @@ public class PlayerScript : EntityScript
         if (RightSight)
         {
             caseWeapon.transform.localPosition = new Vector3(1.25f, caseWeapon.transform.localPosition.y, caseWeapon.transform.localPosition.z);
+            TorsoAnim.SetBool("Right", true);
+            LegsAnim.SetBool("Right", true);
+            currentRotation = Torso.transform.eulerAngles;
+            currentRotation.y = 0f;
+            Torso.transform.eulerAngles = currentRotation;
+            currentRotation = Legs.transform.eulerAngles;
+            currentRotation.y = 0f;
+            Legs.transform.eulerAngles = currentRotation;
         }
         else
         {
             caseWeapon.transform.localPosition = new Vector3(-1.25f, caseWeapon.transform.localPosition.y, caseWeapon.transform.localPosition.z);
+            TorsoAnim.SetBool("Right", false);
+            LegsAnim.SetBool("Right", false);
+            currentRotation = Torso.transform.eulerAngles;
+            currentRotation.y = 180f;
+            Torso.transform.eulerAngles = currentRotation;
+            currentRotation = Legs.transform.eulerAngles;
+            currentRotation.y = 180f;
+            Legs.transform.eulerAngles = currentRotation;
         }
     }
 }
