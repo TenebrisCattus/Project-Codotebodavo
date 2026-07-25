@@ -73,7 +73,7 @@ public class PlayerScript : EntityScript
 
     private void FixedUpdate()
     {
-        GetRB().linearVelocity += new Vector2(horizontalInput*acceleration*0.1f, 0);
+        if (moveblock == 0) { GetRB().linearVelocity += new Vector2(horizontalInput * acceleration * 0.1f, 0); }
         if (GetRB().linearVelocity.x > moveSpeed)
         {
             GetRB().linearVelocity = new Vector2(moveSpeed, GetRB().linearVelocity.y);
@@ -149,12 +149,11 @@ public class PlayerScript : EntityScript
         }
         moveblock = Input.GetAxisRaw("Moveblock");
         horizontalInput = Input.GetAxisRaw("Horizontal");
-        if (horizontalInput < currentHorisontalInput && moveblock != 1)
+        if (moveblock == 0)
         {
-
             currentHorisontalInput -= Mathf.Min(acceleration / accelerationDemodifire, currentHorisontalInput - horizontalInput);
         }
-        else if (horizontalInput > currentHorisontalInput && moveblock != 1)
+        else if (moveblock == 0)
         {
             currentHorisontalInput += Mathf.Min(acceleration / accelerationDemodifire, horizontalInput - currentHorisontalInput);
         }
