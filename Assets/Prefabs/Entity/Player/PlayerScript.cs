@@ -176,13 +176,15 @@ public class PlayerScript : EntityScript
     }
     private void MovementUpdate()
     {
-        if (GetRB().linearVelocity.x != 0)
+        if (Mathf.Abs(GetRB().linearVelocity.x) > 0.1f)
         {
             LegsAnim.SetBool("Run", true);
+            TorsoAnim.SetBool("Run", true);
         }
         else
         {
             LegsAnim.SetBool("Run", false);
+            TorsoAnim.SetBool("Run", false);
         }
         if (isGrounded)
         {
@@ -299,13 +301,18 @@ public class PlayerScript : EntityScript
 
     private void CaseAttack()
     {
-        if (Input.GetAxisRaw("CaseAttack") == 1 && caseWeapon.GetComponent<CaseScript>().InTrigger().Count > 0 && !attackblockRoEUsed)
+        if (Input.GetAxisRaw("CaseAttack") == 1 && !attackblockRoEUsed)
         {
-            foreach (Collider2D col in caseWeapon.GetComponent<CaseScript>().InTrigger())
+            UnityEngine.Debug.Log("AAA");
+            TorsoAnim.SetTrigger("CaseAttack");
+            if (caseWeapon.GetComponent<CaseScript>().InTrigger().Count > 0)
             {
-                if (col.gameObject.CompareTag("Enemy"))
+                foreach (Collider2D col in caseWeapon.GetComponent<CaseScript>().InTrigger())
                 {
-                    col.gameObject.GetComponent<EnemyScript>().Stun(stun);
+                    if (col.gameObject.CompareTag("Enemy"))
+                    {
+                        col.gameObject.GetComponent<EnemyScript>().Stun(stun);
+                    }
                 }
             }
         }
@@ -336,6 +343,7 @@ public class PlayerScript : EntityScript
 
     private void EnergyUse()
     {
+        TorsoAnim.SetTrigger("Energy");
         timerPeriod = 10;
         ActivateInvulnerability(energyDelay);
         Invoke("EnergyUseEnd", energyDelay);
@@ -393,4 +401,6 @@ public class PlayerScript : EntityScript
             Legs.transform.eulerAngles = currentRotation;
         }
     }
+
+
 }
