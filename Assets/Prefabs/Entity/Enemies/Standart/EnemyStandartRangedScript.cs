@@ -5,7 +5,6 @@ public class EnemyStandartRangedScript : EnemyScript
     [Header("Projectile Settings")]
     [SerializeField] GameObject Projectile;
     [SerializeField] Sprite ProjectileSprite;
-    [SerializeField] float damage;
 
     private float nextTimeForAttackRanged;
 
@@ -31,7 +30,7 @@ public class EnemyStandartRangedScript : EnemyScript
     {
         if (SeePlayer() && DestinatonToPlayer() < ReactionRadius() && Time.time > nextTimeForAttackRanged)
         {
-            Instantiate(Projectile, transform.position, transform.rotation).GetComponent<ProjectileScript>().SetStartConditions(1000, 10, ProjectileSprite, damage, 0);
+            Instantiate(Projectile, transform.position, transform.rotation).GetComponent<ProjectileScript>().SetStartConditions(1000, 10, ProjectileSprite, GetDamage(), 0);
             nextTimeForAttackRanged = Time.time + GetAttackDelay();
         }
     }

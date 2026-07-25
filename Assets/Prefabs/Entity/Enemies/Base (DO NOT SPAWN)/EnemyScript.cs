@@ -105,5 +105,10 @@ public class EnemyScript : EntityScript
         damage = standartDamage;
     }
 
+    public float GetDamage()
+    {
+        return damage;
+    }
+
     public virtual void OnTouched() { }
 }

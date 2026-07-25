@@ -39,6 +39,8 @@ public class PlayerScript : EntityScript
     private int ShotgunAmmo = 2;
     private int BMGAmmo = 1;
 
+    private int timer = 999;
+
     public static PlayerScript Game_player { get; private set; }
 
     private void Awake()
@@ -57,6 +59,7 @@ public class PlayerScript : EntityScript
     {
         SetRB(GetComponent<Rigidbody2D>());
         GroundTransform = groundCheck.transform;
+        Invoke("CountDownTheTimer", 1f);
     }
 
     private void Update()
@@ -212,5 +215,21 @@ public class PlayerScript : EntityScript
                 sightDirection = 135f;
                 break;
         }
+    }
+
+    private void CountDownTheTimer()
+    {
+        timer--;
+        Invoke("CountDownTheTimer", 1f);
+    }
+
+    public void SetTimer(int timer)
+    {
+        this.timer = timer;
+    }
+
+    public int GetTimer()
+    {
+        return timer;
     }
 }
