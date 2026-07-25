@@ -8,7 +8,7 @@ public class PlayerScript : EntityScript
 {
     [Header("Links to internal objects")]
     [SerializeField] private GameObject groundCheck;
-    [SerializeField] private CaseScript caseScript;
+    [SerializeField] private GameObject caseWeapon;
     [Header("Movement settings")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
@@ -86,7 +86,7 @@ public class PlayerScript : EntityScript
         BattleUpdate();
         CaseAttack();
         ItemManager();
-
+        RightSidePositionManager();
     }
     public string GetCurrectWeapon()
     {
@@ -284,9 +284,9 @@ public class PlayerScript : EntityScript
 
     private void CaseAttack()
     {
-        if (Input.GetAxisRaw("CaseAttack") == 1 && caseScript.InTrigger().Count > 0 && !attackblockRoEUsed)
+        if (Input.GetAxisRaw("CaseAttack") == 1 && caseWeapon.GetComponent<CaseScript>().InTrigger().Count > 0 && !attackblockRoEUsed)
         {
-            foreach (Collider2D col in caseScript.InTrigger())
+            foreach (Collider2D col in caseWeapon.GetComponent<CaseScript>().InTrigger())
             {
                 if (col.gameObject.CompareTag("Enemy"))
                 {
@@ -349,5 +349,17 @@ public class PlayerScript : EntityScript
     {
         GiveDamage(restHP * -1);
         attackblockRoEUsed = false;
+    }
+
+    private void RightSidePositionManager()
+    {
+        if (RightSight)
+        {
+            caseWeapon.transform.localPosition = new Vector3(1.25f, caseWeapon.transform.localPosition.y, caseWeapon.transform.localPosition.z);
+        }
+        else
+        {
+            caseWeapon.transform.localPosition = new Vector3(-1.25f, caseWeapon.transform.localPosition.y, caseWeapon.transform.localPosition.z);
+        }
     }
 }
