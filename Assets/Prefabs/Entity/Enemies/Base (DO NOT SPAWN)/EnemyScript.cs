@@ -106,15 +106,18 @@ public class EnemyScript : EntityScript
 
     public void Stun(float stunLenght)
     {
-        stunned = true;
-        speed = 0;
-        damage = 0;
-        if (hasweapon)
+        if (stunLenght > 0)
         {
-            hasweapon = false;
-            DropLoot();
+            stunned = true;
+            speed = 0;
+            damage = 0;
+            if (hasweapon)
+            {
+                hasweapon = false;
+                DropLoot();
+            }
+            Invoke("StopStun", stunLenght);
         }
-        Invoke("StopStun", stunLenght);
         
     }
 

@@ -92,6 +92,9 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 1
+  Pistol: {fileID: 825216280857495591, guid: 147a96bba50545449bcf8f33047556c7, type: 3}
+  SMG: {fileID: 2646160555752869337, guid: bc026c3788009644db1d3a955b6908fa, type: 3}
+  Shotgun: {fileID: 7636711435885197390, guid: b9fcf812f4515f74f983db8c303cda44, type: 3}
+  BMG: {fileID: 2822679914407315939, guid: 031fe0f1d096add4780959628bc60144, type: 3}
   Projectile: {fileID: 6806987864797394368, guid: fbf62fefdad4d274db51ba93298eea55, type: 3}
   ProjectileSprite: {fileID: 7482667652216324306, guid: a970a03747bfd25409575da75514faad, type: 3}
-  damage: 0
