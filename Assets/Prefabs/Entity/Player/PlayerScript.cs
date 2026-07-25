@@ -61,44 +61,31 @@ public class PlayerScript : EntityScript
 
     private void Update()
     {
-        if (isGrounded)
-        {
-            accelerationDemodifire = 1;
-        }
-        else 
-        { 
-            accelerationDemodifire = airModifire;
-        }
-        moveblock = Input.GetAxisRaw("Moveblock");
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        if (horizontalInput < currentHorisontalInput && moveblock != 1)
-        {
+        MovementUpdate();
+        BattleUpdate();
+    }
 
-            currentHorisontalInput -= Mathf.Min(acceleration/accelerationDemodifire, currentHorisontalInput - horizontalInput);
-        } else if (horizontalInput > currentHorisontalInput && moveblock != 1)
+    private void FixedUpdate()
+    {
+        GetRB().linearVelocity += new Vector2(horizontalInput*acceleration*0.1f, 0);
+        if (GetRB().linearVelocity.x > moveSpeed)
         {
-            currentHorisontalInput += Mathf.Min(acceleration/accelerationDemodifire, horizontalInput - currentHorisontalInput);
-        }
-        // Блок, запрещающий движение при нажатой кнопки лока. Если это не нужно - закомментируйте этот if
-        if (moveblock == 1 && isGrounded) 
+            GetRB().linearVelocity = new Vector2(moveSpeed, GetRB().linearVelocity.y);
+        }else if (GetRB().linearVelocity.x < moveSpeed * -1)
         {
-            currentHorisontalInput = 0;
+            GetRB().linearVelocity = new Vector2(moveSpeed * -1, GetRB().linearVelocity.y);
         }
-            isGrounded = Physics2D.OverlapCircle(GroundTransform.position, groundCheckRadius, groundLayer);
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            GetRB().linearVelocity = new Vector2(GetRB().linearVelocity.x, jumpForce);
-        }
+    }
 
-        if (horizontalInput == -1)
-        {
-            RightSight = false;
-        }
-        else if (horizontalInput == 1)
-        {
-            RightSight = true;
-        }
+    public string GetCurrentWeapon() { return CurrectWeapon; }
 
+    public int[] EveryAmmo()
+    {
+        return new int[] { PistolAmmo, SMGAmmo, ShotgunAmmo, BMGAmmo };
+    }
+
+    private void BattleUpdate()
+    {
         if ((Input.GetAxisRaw("Fire1")) == 1)
         {
             if (Time.time >= PistolFireDelay && CurrectWeapon == "Wep_Pistol" && PistolAmmo > 0)
@@ -122,7 +109,7 @@ public class PlayerScript : EntityScript
             {
                 ShotgunAmmo -= 1;
                 ShotgunFireDelay = Time.time + 0.5f;
-                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection + 12f)).GetComponent<ProjectileScript>().SetStartConditions(1500, 2, ProjectileSprite, 0.14f,0);
+                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection + 12f)).GetComponent<ProjectileScript>().SetStartConditions(1500, 2, ProjectileSprite, 0.14f, 0);
                 Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection + 9f)).GetComponent<ProjectileScript>().SetStartConditions(1500, 2, ProjectileSprite, 0.14f, 0);
                 Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection + 6f)).GetComponent<ProjectileScript>().SetStartConditions(1500, 2, ProjectileSprite, 0.14f, 0);
                 Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection + 3f)).GetComponent<ProjectileScript>().SetStartConditions(1500, 2, ProjectileSprite, 0.14f, 0);
@@ -142,10 +129,48 @@ public class PlayerScript : EntityScript
             ShotgunFireDelay = 0;
             Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection)).GetComponent<ProjectileScript>().SetStartConditions(1000, 5, ProjectileSprite, 0, 3f);
         }
+    }
 
-        Debug.Log(CurrectWeapon);
-        Debug.Log(SMGAmmo);
+    private void MovementUpdate()
+    {
+        if (isGrounded)
+        {
+            accelerationDemodifire = 1;
+        }
+        else
+        {
+            accelerationDemodifire = airModifire;
+        }
+        moveblock = Input.GetAxisRaw("Moveblock");
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        if (horizontalInput < currentHorisontalInput && moveblock != 1)
+        {
 
+            currentHorisontalInput -= Mathf.Min(acceleration / accelerationDemodifire, currentHorisontalInput - horizontalInput);
+        }
+        else if (horizontalInput > currentHorisontalInput && moveblock != 1)
+        {
+            currentHorisontalInput += Mathf.Min(acceleration / accelerationDemodifire, horizontalInput - currentHorisontalInput);
+        }
+        // Блок, запрещающий движение при нажатой кнопки лока. Если это не нужно - закомментируйте этот if
+        if (moveblock == 1 && isGrounded)
+        {
+            currentHorisontalInput = 0;
+        }
+        isGrounded = Physics2D.OverlapCircle(GroundTransform.position, groundCheckRadius, groundLayer);
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            GetRB().linearVelocity = new Vector2(GetRB().linearVelocity.x, jumpForce);
+        }
+
+        if (horizontalInput == -1)
+        {
+            RightSight = false;
+        }
+        else if (horizontalInput == 1)
+        {
+            RightSight = true;
+        }
 
         UpDownSightInput = Input.GetAxisRaw("Vertical");
         LeftRightSightInput = Input.GetAxisRaw("Horizontal");
@@ -153,16 +178,16 @@ public class PlayerScript : EntityScript
         switch (UpDownSightInput, LeftRightSightInput)
         {
             default:
-                if(RightSight)
+                if (RightSight)
                 {
                     sightDirection = 180f;
                 }
-                else if(!RightSight)
+                else if (!RightSight)
                 {
                     sightDirection = 0f;
-                }         
+                }
                 break;
-            case ( 0, 1):
+            case (0, 1):
                 sightDirection = 180f;
                 break;
             case (0, -1):
@@ -187,26 +212,5 @@ public class PlayerScript : EntityScript
                 sightDirection = 135f;
                 break;
         }
-
-        
-    }
-
-    private void FixedUpdate()
-    {
-        GetRB().linearVelocity += new Vector2(horizontalInput*acceleration*0.1f, 0);
-        if (GetRB().linearVelocity.x > moveSpeed)
-        {
-            GetRB().linearVelocity = new Vector2(moveSpeed, GetRB().linearVelocity.y);
-        }else if (GetRB().linearVelocity.x < moveSpeed * -1)
-        {
-            GetRB().linearVelocity = new Vector2(moveSpeed * -1, GetRB().linearVelocity.y);
-        }
-    }
-
-    public string GetCurrentWeapon() { return CurrectWeapon; }
-
-    public int[] EveryAmmo()
-    {
-        return new int[] { PistolAmmo, SMGAmmo, ShotgunAmmo, BMGAmmo };
     }
 }
