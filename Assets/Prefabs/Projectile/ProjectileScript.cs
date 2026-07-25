@@ -20,8 +20,9 @@ public class ProjectileScript : MonoBehaviour
         
     }
 
-    public void SetStartConditions(float speed, float lifetime, Sprite sprite, float damage, float stun)
+    public void SetStartConditions(float speed, float lifetime, Sprite sprite, float damage, float stun, bool fromEnemy)
     {
+        if (fromEnemy) { gameObject.layer = LayerMask.NameToLayer("ProjectileEnemy"); }
         projectileSpeed = speed;
         sr.sprite = sprite;
         rb.AddForce(transform.right * projectileSpeed * -1);
@@ -36,6 +37,10 @@ public class ProjectileScript : MonoBehaviour
         {
             hitObject.GetComponent<EntityScript>().GiveDamage(damage);
             hitObject.GetComponent<EnemyScript>().Stun(stun);
+        }
+        else if (hitObject.CompareTag("Player"))
+        {
+            hitObject.GetComponent<EntityScript>().GiveDamage(damage);
         }
         Destroy(gameObject, 0);
     }
