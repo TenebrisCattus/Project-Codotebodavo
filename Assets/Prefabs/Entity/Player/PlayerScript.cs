@@ -301,13 +301,18 @@ public class PlayerScript : EntityScript
 
     private void CaseAttack()
     {
-        if (Input.GetAxisRaw("CaseAttack") == 1 && caseWeapon.GetComponent<CaseScript>().InTrigger().Count > 0 && !attackblockRoEUsed)
+        if (Input.GetAxisRaw("CaseAttack") == 1 && !attackblockRoEUsed)
         {
-            foreach (Collider2D col in caseWeapon.GetComponent<CaseScript>().InTrigger())
+            UnityEngine.Debug.Log("AAA");
+            TorsoAnim.SetTrigger("CaseAttack");
+            if (caseWeapon.GetComponent<CaseScript>().InTrigger().Count > 0)
             {
-                if (col.gameObject.CompareTag("Enemy"))
+                foreach (Collider2D col in caseWeapon.GetComponent<CaseScript>().InTrigger())
                 {
-                    col.gameObject.GetComponent<EnemyScript>().Stun(stun);
+                    if (col.gameObject.CompareTag("Enemy"))
+                    {
+                        col.gameObject.GetComponent<EnemyScript>().Stun(stun);
+                    }
                 }
             }
         }
