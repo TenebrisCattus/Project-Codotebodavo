@@ -110,7 +110,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 25, y: 25}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1656874584942639129
 CanvasRenderer:
@@ -668,6 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe5dd6ced052144c95f58ea97cd2edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIScript
+  brain: {fileID: 7369911209382215428}
   heathBarUpper: {fileID: 5954977490555230597}
   heathBarUnder: {fileID: 7026099630385792345}
   bulletIcon: {fileID: 3879003223703562415}
@@ -686,6 +687,21 @@ MonoBehaviour:
   Count_7: {fileID: -8756313938178929943, guid: 6bba67a0c7e9d0047bb469cb78633b0a, type: 3}
   Count_8: {fileID: -784250273131137950, guid: 6bba67a0c7e9d0047bb469cb78633b0a, type: 3}
   Count_9: {fileID: 7098731691616144502, guid: 6bba67a0c7e9d0047bb469cb78633b0a, type: 3}
+  Brain_0: {fileID: 540803829919948875, guid: 4c7e940e5329e124fb521afef5dc60be, type: 3}
+  Brain_1: {fileID: -6597746790429190138, guid: 4c7e940e5329e124fb521afef5dc60be, type: 3}
+  Brain_2: {fileID: -607332128543417956, guid: 4c7e940e5329e124fb521afef5dc60be, type: 3}
+  Brain_3: {fileID: 7085326713702782872, guid: 4c7e940e5329e124fb521afef5dc60be, type: 3}
+  Brain_4: {fileID: 5877450452412718023, guid: 4c7e940e5329e124fb521afef5dc60be, type: 3}
+  FlBullet_0: {fileID: -3041690093582006494, guid: 3e9e33cf064d7114e938ba824a1d18cf, type: 3}
+  FlBullet_1: {fileID: 4893094254006734554, guid: 3e9e33cf064d7114e938ba824a1d18cf, type: 3}
+  FlBullet_2: {fileID: 313723110340249533, guid: 3e9e33cf064d7114e938ba824a1d18cf, type: 3}
+  FlBullet_3: {fileID: -6296956831429614419, guid: 3e9e33cf064d7114e938ba824a1d18cf, type: 3}
+  FlBullet_4: {fileID: -8842197038010179870, guid: 3e9e33cf064d7114e938ba824a1d18cf, type: 3}
+  Shell_0: {fileID: -300394245976103344, guid: d1023feb2825fec45a8c42ce08e2ab34, type: 3}
+  Shell_1: {fileID: -2701347192778347039, guid: d1023feb2825fec45a8c42ce08e2ab34, type: 3}
+  Shell_2: {fileID: 3096129496190655462, guid: d1023feb2825fec45a8c42ce08e2ab34, type: 3}
+  Shell_3: {fileID: -1039664410368253671, guid: d1023feb2825fec45a8c42ce08e2ab34, type: 3}
+  Shell_4: {fileID: -4218152051262346409, guid: d1023feb2825fec45a8c42ce08e2ab34, type: 3}
   healthBarSpeed: 0.005
   delayForUnder: 3
 --- !u!1 &7146260684894342335
@@ -759,7 +775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 300, y: 25}
+  m_AnchoredPosition: {x: 326, y: 25}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5291947145640558605
@@ -834,7 +850,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 300, y: 25}
+  m_AnchoredPosition: {x: 326, y: 25}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3621078187701113613
@@ -910,6 +926,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 57.9, y: 56.9}
+  m_AnchoredPosition: {x: 111, y: 107}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -1,10 +1,12 @@
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIScript : MonoBehaviour
 {
     [Header("UI Elements")]
+    [SerializeField] private Image brain;
     [SerializeField] private Image heathBarUpper;
     [SerializeField] private Image heathBarUnder;
     [SerializeField] private Image bulletIcon;
@@ -24,6 +26,24 @@ public class UIScript : MonoBehaviour
     [SerializeField] private Sprite Count_7;
     [SerializeField] private Sprite Count_8;
     [SerializeField] private Sprite Count_9;
+    [Header("Sprites (Brain)")]
+    [SerializeField] private Sprite Brain_0;
+    [SerializeField] private Sprite Brain_1;
+    [SerializeField] private Sprite Brain_2;
+    [SerializeField] private Sprite Brain_3;
+    [SerializeField] private Sprite Brain_4;
+    [Header("Sprites (Flat Bullet)")]
+    [SerializeField] private Sprite FlBullet_0;
+    [SerializeField] private Sprite FlBullet_1;
+    [SerializeField] private Sprite FlBullet_2;
+    [SerializeField] private Sprite FlBullet_3;
+    [SerializeField] private Sprite FlBullet_4;
+    [Header("Sprites (Shell)")]
+    [SerializeField] private Sprite Shell_0;
+    [SerializeField] private Sprite Shell_1;
+    [SerializeField] private Sprite Shell_2;
+    [SerializeField] private Sprite Shell_3;
+    [SerializeField] private Sprite Shell_4;
     [Header("Settings")]
     [SerializeField] private float healthBarSpeed;
     [SerializeField] private float delayForUnder;
@@ -37,9 +57,12 @@ public class UIScript : MonoBehaviour
     private string currentWeapon;
     private int[] ammoes;
     private int count;
+    private int brainFrame = 0;
     void Start()
     {
         MaxHP = PlayerScript.Game_player.GetMaxHP();
+        BrainAnim();
+        BulletAnim();
     }
 
     void Update()
@@ -183,5 +206,87 @@ public class UIScript : MonoBehaviour
                 coun.sprite = Count_none;
                 break;
         }
+    }
+
+    private void BrainAnim()
+    {
+        if (brainFrame > 4) { brainFrame = 0; }
+        switch (brainFrame)
+        {
+            case (0):
+                brain.sprite = Brain_0;
+                break;
+                case (1):
+                brain.sprite = Brain_1;
+                break;
+                case (2):
+                brain.sprite = Brain_2;
+                break;
+                case (3):
+                brain.sprite = Brain_3;
+                break;
+                case (4):
+                brain.sprite = Brain_4;
+                break;
+        }
+        brainFrame++;
+        Invoke("BrainAnim", 0.2f);
+    }
+
+    private void BulletAnim()
+    {
+        switch (currentWeapon)
+        {
+            case "Wep_Pistol":
+                switch (brainFrame)
+                {
+                    case (0):
+                        bulletIcon.sprite = FlBullet_0;
+                        break;
+                    case (1):
+                        bulletIcon.sprite = FlBullet_1;
+                        break;
+                    case (2):
+                        bulletIcon.sprite = FlBullet_2;
+                        break;
+                    case (3):
+                        bulletIcon.sprite = FlBullet_3;
+                        break;
+                    case (4):
+                        bulletIcon.sprite = FlBullet_4;
+                        break;
+                }
+                break;
+            case "Wep_SMG":
+                bulletIcon.sprite = null;
+                break;
+            case "Wep_BMG":
+                bulletIcon.sprite = null;
+                break;
+            case "Wep_Shotgun":
+                switch (brainFrame)
+                {
+                    case (0):
+                        bulletIcon.sprite = Shell_0;
+                        break;
+                    case (1):
+                        bulletIcon.sprite = Shell_1;
+                        break;
+                    case (2):
+                        bulletIcon.sprite = Shell_2;
+                        break;
+                    case (3):
+                        bulletIcon.sprite = Shell_3;
+                        break;
+                    case (4):
+                        bulletIcon.sprite = Shell_4;
+                        break;
+                }
+                break;
+            case "none":
+                bulletIcon.sprite = null;
+                break;
+        }
+        Invoke("BulletAnim", 0.2f);
     }
 }
