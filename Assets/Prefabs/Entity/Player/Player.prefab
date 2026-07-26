@@ -26,12 +26,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4541338428888203681}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.171, y: 0.365, z: 0}
-  m_LocalScale: {x: 0.33, y: 0.33, z: 0.33}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 591548927069459544}
+  m_Father: {fileID: 3774745266801739979}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &931034114421840331
 SpriteRenderer:
@@ -143,8 +143,8 @@ Transform:
   m_GameObject: {fileID: 5913752987464655195}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8648, y: 0.3417, z: 0}
-  m_LocalScale: {x: 2.7336802, y: 2.5620782, z: 1}
+  m_LocalPosition: {x: 9.1359, y: -0.0748, z: 0}
+  m_LocalScale: {x: 17.364515, y: 7.9011965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3032592756082883740}
@@ -336,7 +336,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -429,7 +429,7 @@ Transform:
   m_GameObject: {fileID: 8696478615125689932}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.003, z: 0}
+  m_LocalPosition: {x: 0, y: -4.192, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -560,8 +560,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 31532699023584299, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_Mass
-      value: 5
+      value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 31532699023584299, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 1f8694a75e237ba42a35bd3e7537785f, type: 2}
     - target: {fileID: 31532699023584299, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_GravityScale
       value: 4
@@ -570,17 +574,33 @@ PrefabInstance:
       propertyPath: m_LinearDamping
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 590702413021495874, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
+      propertyPath: m_Size.x
+      value: 2.5734067
+      objectReference: {fileID: 0}
+    - target: {fileID: 590702413021495874, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
+      propertyPath: m_Size.y
+      value: 4.961253
+      objectReference: {fileID: 0}
+    - target: {fileID: 590702413021495874, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.09661269
+      objectReference: {fileID: 0}
+    - target: {fileID: 590702413021495874, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.17067862
+      objectReference: {fileID: 0}
     - target: {fileID: 2816750538308319182, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.33
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2816750538308319182, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.33
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2816750538308319182, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.33
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2816750538308319182, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -620,15 +640,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227143894238654929, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.33
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5227143894238654929, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.33
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5227143894238654929, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.33
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5227143894238654929, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -715,12 +735,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6268432836701865350, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2181063516785584561}
-    - targetCorrespondingSourceObject: {fileID: 8421036283882728770, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6134952269805136418}
     - targetCorrespondingSourceObject: {fileID: 5227143894238654929, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3666753612275385080}
+    - targetCorrespondingSourceObject: {fileID: 5227143894238654929, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6134952269805136418}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4210226005989817169, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       insertIndex: -1
@@ -759,11 +779,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!4 &591548927069459544 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8421036283882728770, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
-  m_PrefabInstance: {fileID: 9000476287751190810}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3032592756082883740 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6268432836701865350, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
@@ -826,9 +841,9 @@ MonoBehaviour:
   Arm: {fileID: 8960041613501481011}
   Legs: {fileID: 4665326719350319898}
   Effect: {fileID: 4541338428888203681}
-  moveSpeed: 10
-  jumpForce: 16
-  acceleration: 8
+  moveSpeed: 30
+  jumpForce: 60
+  acceleration: 24
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2

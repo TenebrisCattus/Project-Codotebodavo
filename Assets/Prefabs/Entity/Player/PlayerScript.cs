@@ -53,13 +53,16 @@ public class PlayerScript : EntityScript
     private float SmgFireDelay;
     private float ShotgunFireDelay;
     private float BMGFireDelay;
-    private string CurrectWeapon = "Wep_Shotgun";
+    private string CurrectWeapon = "none";
     private Animator TorsoAnim;
     private Animator LegsAnim;
     private Animator EffectAnim;
     private Animator ArmAnim;
     private Vector3 currentRotation;
     private float caseTimer;
+
+    private string currentLocName;
+    private string nextLocName;
 
     private int PistolAmmo = 10;
     private int SMGAmmo = 30;
@@ -110,7 +113,6 @@ public class PlayerScript : EntityScript
 
     private void FixedUpdate()
     {
-        UnityEngine.Debug.Log(GetRB().linearVelocity);
         if (moveblock == 0 && !attackblockRoEUsed) { GetRB().linearVelocity += new Vector2(horizontalInput * acceleration * 0.1f, 0); }
         if (GetRB().linearVelocity.x > moveSpeed)
         {
@@ -118,6 +120,10 @@ public class PlayerScript : EntityScript
         }else if (GetRB().linearVelocity.x < moveSpeed * -1)
         {
             GetRB().linearVelocity = new Vector2(moveSpeed * -1, GetRB().linearVelocity.y);
+        }
+        if (horizontalInput == 0 && isGrounded)
+        {
+            GetRB().linearVelocity = new Vector2(GetRB().linearVelocity.x/1.1f, GetRB().linearVelocity.y);
         }
     }
 
@@ -136,32 +142,32 @@ public class PlayerScript : EntityScript
             {
                 PistolFireDelay = Time.time + 0.5f;
                 PistolAmmo -= 1;
-                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection)).GetComponent<ProjectileScript>().SetStartConditions(1000, 2, ProjectileSprite, 0.45f, 0, false);
+                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection)).GetComponent<ProjectileScript>().SetStartConditions(3000, 2, ProjectileSprite, 0.45f, 0, false);
             }
             else if (Time.time >= SmgFireDelay && CurrectWeapon == "Wep_SMG" && SMGAmmo > 0)
             {
                 SmgFireDelay = Time.time + 0.1f;
                 SMGAmmo -= 1;
-                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection)).GetComponent<ProjectileScript>().SetStartConditions(1000, 2, ProjectileSprite, 0.30f, 0, false);
+                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection)).GetComponent<ProjectileScript>().SetStartConditions(3000, 2, ProjectileSprite, 0.30f, 0, false);
             }
             else if (CurrectWeapon == "Wep_BMG" && BMGAmmo > 0)
             {
                 BMGAmmo -= 1;
-                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection)).GetComponent<ProjectileScript>().SetStartConditions(1000, 2, ProjectileSprite, 2.25f, 0, false);
+                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection)).GetComponent<ProjectileScript>().SetStartConditions(3000, 2, ProjectileSprite, 2.25f, 0, false);
             }
             else if (Time.time >= ShotgunFireDelay && CurrectWeapon == "Wep_Shotgun" && ShotgunAmmo > 0)
             {
                 ShotgunAmmo -= 1;
                 ShotgunFireDelay = Time.time + 0.5f;
-                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection + 12f)).GetComponent<ProjectileScript>().SetStartConditions(1000, 2, ProjectileSprite, 0.14f, 0, false);
-                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection + 9f)).GetComponent<ProjectileScript>().SetStartConditions(1000, 2, ProjectileSprite, 0.14f, 0, false);
-                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection + 6f)).GetComponent<ProjectileScript>().SetStartConditions(1000, 2, ProjectileSprite, 0.14f, 0, false);
-                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection + 3f)).GetComponent<ProjectileScript>().SetStartConditions(1000, 2, ProjectileSprite, 0.14f, 0, false);
-                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection)).GetComponent<ProjectileScript>().SetStartConditions(1000, 2, ProjectileSprite, 0.14f, 0, false);
-                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection - 3f)).GetComponent<ProjectileScript>().SetStartConditions(1000, 2, ProjectileSprite, 0.14f, 0, false);
-                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection - 6f)).GetComponent<ProjectileScript>().SetStartConditions(1000, 2, ProjectileSprite, 0.14f, 0, false);
-                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection - 9f)).GetComponent<ProjectileScript>().SetStartConditions(1000, 2, ProjectileSprite, 0.14f, 0, false);
-                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection - 12f)).GetComponent<ProjectileScript>().SetStartConditions(1000, 2, ProjectileSprite, 0.14f, 0, false);
+                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection + 12f)).GetComponent<ProjectileScript>().SetStartConditions(3000, 2, ProjectileSprite, 0.14f, 0, false);
+                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection + 9f)).GetComponent<ProjectileScript>().SetStartConditions(3000, 2, ProjectileSprite, 0.14f, 0, false);
+                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection + 6f)).GetComponent<ProjectileScript>().SetStartConditions(3000, 2, ProjectileSprite, 0.14f, 0, false);
+                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection + 3f)).GetComponent<ProjectileScript>().SetStartConditions(3000, 2, ProjectileSprite, 0.14f, 0, false);
+                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection)).GetComponent<ProjectileScript>().SetStartConditions(3000, 2, ProjectileSprite, 0.14f, 0, false);
+                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection - 3f)).GetComponent<ProjectileScript>().SetStartConditions(3000, 2, ProjectileSprite, 0.14f, 0, false);
+                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection - 6f)).GetComponent<ProjectileScript>().SetStartConditions(3000, 2, ProjectileSprite, 0.14f, 0, false);
+                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection - 9f)).GetComponent<ProjectileScript>().SetStartConditions(3000, 2, ProjectileSprite, 0.14f, 0, false);
+                Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection - 12f)).GetComponent<ProjectileScript>().SetStartConditions(3000, 2, ProjectileSprite, 0.14f, 0, false);
 
             }
         }
@@ -176,7 +182,7 @@ public class PlayerScript : EntityScript
             SMGAmmo = 30;
             ShotgunAmmo = 2;
             BMGAmmo = 1;
-    Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection)).GetComponent<ProjectileScript>().SetStartConditions(1000, 5, ProjectileSprite, 0, 3f, false);
+    Instantiate(Projectile, transform.position, transform.rotation * Quaternion.Euler(0, 0, sightDirection)).GetComponent<ProjectileScript>().SetStartConditions(3000, 5, ProjectileSprite, 0, 3f, false);
         }
     }
 
@@ -228,7 +234,7 @@ public class PlayerScript : EntityScript
             LegsAnim.SetTrigger("Jump");
             TorsoAnim.SetTrigger("Jump");
             ArmAnim.SetTrigger("Jump");
-            GetRB().linearVelocity = new Vector2(GetRB().linearVelocity.x, jumpForce);
+            Invoke("Jump", 0.2f);
         }
 
         if (horizontalInput == -1)
@@ -305,10 +311,18 @@ public class PlayerScript : EntityScript
                 break;
         }
     }
-
+    
+    private void Jump()
+    {
+        GetRB().linearVelocity = new Vector2(GetRB().linearVelocity.x, jumpForce);
+    }
     private void CountDownTheTimer()
     {
         timer--;
+        if (timer == 0)
+        {
+            Death();
+        }
         Invoke("CountDownTheTimer", timerPeriod);
     }
 
@@ -459,6 +473,11 @@ public class PlayerScript : EntityScript
 
     public override void Death()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(currentLocName);
+    }
+
+    public void SetLocs(string cur, string newLoc) { 
+        currentLocName = cur;
+        nextLocName = newLoc;
     }
 }

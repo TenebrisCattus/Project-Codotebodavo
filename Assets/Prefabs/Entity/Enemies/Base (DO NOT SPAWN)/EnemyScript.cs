@@ -140,7 +140,7 @@ public class EnemyScript : EntityScript
     public void DropLoot()
     {
 
-        int lootChance = Random.Range(0, 100);
+        int lootChance = Random.Range(21, 100);
 
         if (lootChance > 20 && lootChance <= 50)
         {
