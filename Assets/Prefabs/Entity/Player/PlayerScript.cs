@@ -106,6 +106,7 @@ public class PlayerScript : EntityScript
 
     private void FixedUpdate()
     {
+        UnityEngine.Debug.Log(GetRB().linearVelocity);
         if (moveblock == 0 && !attackblockRoEUsed) { GetRB().linearVelocity += new Vector2(horizontalInput * acceleration * 0.1f, 0); }
         if (GetRB().linearVelocity.x > moveSpeed)
         {

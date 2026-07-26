@@ -702,7 +702,7 @@ MonoBehaviour:
   Torso: {fileID: 101906085819593082}
   Legs: {fileID: 4665326719350319898}
   Effect: {fileID: 4541338428888203681}
-  moveSpeed: 1000
+  moveSpeed: 10
   jumpForce: 16
   acceleration: 8
   groundCheckRadius: 0.2
