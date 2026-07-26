@@ -11,6 +11,7 @@ public class PlayerScript : EntityScript
     [SerializeField] private GameObject groundCheck;
     [SerializeField] private GameObject caseWeapon;
     [SerializeField] private GameObject Torso;
+    [SerializeField] private GameObject Arm;
     [SerializeField] private GameObject Legs;
     [SerializeField] private GameObject Effect;
     [Header("Movement settings")]
@@ -56,6 +57,7 @@ public class PlayerScript : EntityScript
     private Animator TorsoAnim;
     private Animator LegsAnim;
     private Animator EffectAnim;
+    private Animator ArmAnim;
     private Vector3 currentRotation;
     private float caseTimer;
 
@@ -83,6 +85,7 @@ public class PlayerScript : EntityScript
     private void Start()
     {
         TorsoAnim = Torso.GetComponent<Animator>();
+        ArmAnim = Arm.GetComponent<Animator>();
         LegsAnim = Legs.GetComponent<Animator>();
         EffectAnim = Effect.GetComponent<Animator>();
         attackblockRoEUsed = false;
@@ -243,35 +246,59 @@ public class PlayerScript : EntityScript
                 if (RightSight)
                 {
                     sightDirection = 180f;
+                    ArmAnim.SetInteger("Direction", 6);
                 }
                 else if (!RightSight)
                 {
                     sightDirection = 0f;
+                    ArmAnim.SetInteger("Direction", 1);
                 }
                 break;
             case (0, 1):
                 sightDirection = 180f;
+                ArmAnim.SetInteger("Direction", 6);
                 break;
             case (0, -1):
                 sightDirection = 0f;
+                ArmAnim.SetInteger("Direction", 1);
                 break;
             case (-1, 0):
                 sightDirection = 90f;
+                if (RightSight)
+                {
+                    ArmAnim.SetInteger("Direction", 4);
+                }
+                else if (!RightSight)
+                {
+                    ArmAnim.SetInteger("Direction", 3);
+                }
                 break;
             case (1, 0):
                 sightDirection = 270f;
+                if (RightSight)
+                {
+                    ArmAnim.SetInteger("Direction", 8);
+                }
+                else if (!RightSight)
+                {
+                    ArmAnim.SetInteger("Direction", 9);
+                }
                 break;
             case (1, 1):
                 sightDirection = 225f;
+                ArmAnim.SetInteger("Direction", 7);
                 break;
             case (-1, -1):
                 sightDirection = 45f;
+                ArmAnim.SetInteger("Direction", 2);
                 break;
             case (1, -1):
                 sightDirection = 315f;
+                ArmAnim.SetInteger("Direction", 10);
                 break;
             case (-1, 1):
                 sightDirection = 135f;
+                ArmAnim.SetInteger("Direction", 5);
                 break;
         }
     }

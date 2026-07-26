@@ -445,6 +445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3666753612275385080}
   - component: {fileID: 4095116276907681576}
+  - component: {fileID: 7928048018622761693}
   m_Layer: 0
   m_Name: Arm
   m_TagString: Untagged
@@ -460,12 +461,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8960041613501481011}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.171, y: 0.365, z: 0}
-  m_LocalScale: {x: 0.33, y: 0.33, z: 0.33}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 591548927069459544}
+  m_Father: {fileID: 3774745266801739979}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4095116276907681576
 SpriteRenderer:
@@ -512,21 +513,43 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -132489901
+  m_SortingLayer: 1
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10.24, y: 10.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!95 &7928048018622761693
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960041613501481011}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 28edc4d4233540447a43e098755af319, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &9000476287751190810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -695,7 +718,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8421036283882728770, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6134952269805136418}
-    - targetCorrespondingSourceObject: {fileID: 8421036283882728770, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 5227143894238654929, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3666753612275385080}
     m_AddedComponents:
@@ -744,6 +767,11 @@ Transform:
 --- !u!4 &3032592756082883740 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6268432836701865350, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
+  m_PrefabInstance: {fileID: 9000476287751190810}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3774745266801739979 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5227143894238654929, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
   m_PrefabInstance: {fileID: 9000476287751190810}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &4665326719350319898 stripped
@@ -795,6 +823,7 @@ MonoBehaviour:
   groundCheck: {fileID: 8696478615125689932}
   caseWeapon: {fileID: 5913752987464655195}
   Torso: {fileID: 101906085819593082}
+  Arm: {fileID: 8960041613501481011}
   Legs: {fileID: 4665326719350319898}
   Effect: {fileID: 4541338428888203681}
   moveSpeed: 10
