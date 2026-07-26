@@ -62,7 +62,7 @@ public class PlayerScript : EntityScript
     private float caseTimer;
 
     private string currentLocName;
-    private string nextLocName;
+    public string nextLocName;
 
     private int PistolAmmo = 10;
     private int SMGAmmo = 30;

@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -132489901
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
@@ -514,7 +514,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -132489901
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1768510829105580118, guid: 5849bb663e4cb86418e0cdf9aef03ce0, type: 3}
@@ -572,7 +572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 31532699023584299, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_LinearDamping
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 590702413021495874, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_Size.x
@@ -616,7 +616,7 @@ PrefabInstance:
       objectReference: {fileID: -1163348790152806884, guid: 09fb0ca10abed4c4c878e55439cf6490, type: 3}
     - target: {fileID: 3508020082646251152, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3508020082646251152, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_SortingOrder
@@ -672,7 +672,7 @@ PrefabInstance:
       objectReference: {fileID: -4083321284404567873, guid: e115d364edab15c49990f9834746188a, type: 3}
     - target: {fileID: 5799468926568115614, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5799468926568115614, guid: 35950d23b54ab2c428f6f1377d7b2f6b, type: 3}
       propertyPath: m_SortingLayerID
@@ -860,3 +860,4 @@ MonoBehaviour:
   restHP: 0.25
   restCost: 20
   CoolDown: 5
+  nextLocName: 
