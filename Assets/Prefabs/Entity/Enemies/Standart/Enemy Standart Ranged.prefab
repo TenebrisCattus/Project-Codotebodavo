@@ -84,11 +84,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStandartRangedScript
   HP: 1
   MaxHP: 1
-  reactionRadius: 10
+  reactionRadius: 30
   dealDamageWhenTouched: 1
   attackDelay: 1
   standartDamage: 0.33
-  standartSpeed: 5
+  standartSpeed: 15
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 1
