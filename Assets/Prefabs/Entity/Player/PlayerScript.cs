@@ -221,10 +221,12 @@ public class PlayerScript : EntityScript
         isGrounded = Physics2D.OverlapCircle(GroundTransform.position, groundCheckRadius, groundLayer);
         LegsAnim.SetBool("OnGround", isGrounded);
         TorsoAnim.SetBool("OnGround", isGrounded);
+        ArmAnim.SetBool("OnGround", isGrounded);
         if (Input.GetButtonDown("Jump") && isGrounded && !attackblockRoEUsed)
         {
             LegsAnim.SetTrigger("Jump");
             TorsoAnim.SetTrigger("Jump");
+            ArmAnim.SetTrigger("Jump");
             GetRB().linearVelocity = new Vector2(GetRB().linearVelocity.x, jumpForce);
         }
 
@@ -341,6 +343,7 @@ public class PlayerScript : EntityScript
         if (Input.GetAxisRaw("CaseAttack") == 1 && !attackblockRoEUsed && Time.time > caseTimer)
         {
             caseTimer = Time.time+1;
+            Arm.GetComponent<SpriteRenderer>().enabled = false;
             TorsoAnim.SetTrigger("CaseAttack");
             EffectAnim.SetTrigger("Start");
             if (caseWeapon.GetComponent<CaseScript>().InTrigger().Count > 0)
@@ -353,7 +356,13 @@ public class PlayerScript : EntityScript
                     }
                 }
             }
+            Invoke("ArmShow", 0.8f);
         }
+    }
+
+    private void ArmShow()
+    {
+        Arm.GetComponent<SpriteRenderer>().enabled = true;
     }
 
     private void ItemManager()
@@ -381,6 +390,7 @@ public class PlayerScript : EntityScript
 
     private void EnergyUse()
     {
+        Arm.GetComponent<SpriteRenderer>().enabled = false;
         TorsoAnim.SetTrigger("Energy");
         timerPeriod = 10;
         ActivateInvulnerability(energyDelay);
@@ -389,6 +399,7 @@ public class PlayerScript : EntityScript
 
     private void EnergyUseEnd()
     {
+        Arm.GetComponent<SpriteRenderer>().enabled = true;
         GiveDamage(energyCost);
         attackblockRoEUsed = false;
         Invoke("EnergyEffectEnd", energyTimeSave-energyDelay);
@@ -401,6 +412,7 @@ public class PlayerScript : EntityScript
 
     private void RestUse()
     {
+        Arm.GetComponent<SpriteRenderer>().enabled = false;
         timer -= restCost;
         TorsoAnim.SetTrigger("Breath");
         ActivateInvulnerability(restDelay);
@@ -409,6 +421,7 @@ public class PlayerScript : EntityScript
 
     private void RestUseEnd()
     {
+        Arm.GetComponent<SpriteRenderer>().enabled = true;
         GiveDamage(restHP * -1);
         attackblockRoEUsed = false;
     }
