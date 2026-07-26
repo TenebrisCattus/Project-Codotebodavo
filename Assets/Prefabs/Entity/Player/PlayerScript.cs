@@ -1,8 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Unity.Mathematics;
 using UnityEngine;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : EntityScript
 {
@@ -415,5 +416,8 @@ public class PlayerScript : EntityScript
         }
     }
 
-
+    public override void Death()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
 }
