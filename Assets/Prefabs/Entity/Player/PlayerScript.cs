@@ -374,6 +374,7 @@ public class PlayerScript : EntityScript
     private void RestUse()
     {
         timer -= restCost;
+        TorsoAnim.SetTrigger("Breath");
         ActivateInvulnerability(restDelay);
         Invoke("RestUseEnd", restDelay);
     }

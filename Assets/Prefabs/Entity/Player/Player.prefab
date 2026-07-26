@@ -714,10 +714,10 @@ MonoBehaviour:
   ProjectileSprite: {fileID: 7482667652216324306, guid: a970a03747bfd25409575da75514faad, type: 3}
   invulnerability: 2
   stun: 3
-  energyDelay: 1
+  energyDelay: 2
   energyTimeSave: 15
   energyCost: 0.3
-  restDelay: 1
+  restDelay: 2
   restHP: 0.25
   restCost: 20
   CoolDown: 5
